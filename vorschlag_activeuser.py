@@ -3,13 +3,10 @@ import json
 import random
 import numpy as np
 
-#pylint 9,96/10 da zu viele return statements (2 gleiche meldungen, mgl. lösung schon gesucht)
 #good to know für eingabe neue würfel: leerzeichen vor und nach nummer des würfels
 #bsp: 2. und 4. würfel neu: '2 4' dann enter (auch: '2 und 4' davor/danach leer, rest egal)
-#nächstes: bonusregel (2. kniffel)
-#noch gar nicht gemacht: evtl klassen, testfunktion
+#zu tun: evtl klassen, testfunktion
 #evtl. schönheit der arbeit: z.B. live summen,
-#wenn aus backup: ermitteln und anzeigen wer dran, ausgabe tabelle
 #option alle würfel neu würfeln, bei spielende abfrage ob spiel erneut gestartet werden soll
 
 def main():
@@ -24,6 +21,8 @@ def main():
             delete_backup()
             loop_control_backup = 1
         elif backup_decision == 'j':
+            ausgabe()
+            active_user = analyse_backup()
             loop_control_backup = 1
         else:
             print('Bitte geben Sie n oder j ein!')
@@ -52,6 +51,39 @@ def delete_backup():
         count_reset_player_two = count_reset_player_two + 1
     with open ('kniffel_player.json', 'w') as kniffel_player:
         json.dump(player, kniffel_player, indent=4)
+
+def analyse_backup():
+    """herausfinden welcher user dran + aktuelle tabelle printen"""
+    with open ('kniffel_player.json', 'r') as kniffel_input:
+        player=json.load(kniffel_input)
+    count_element_player_one=0
+    count_player_one=1
+    while count_player_one <=6:
+        if player[0][count_player_one] != '-':
+            count_element_player_one = count_element_player_one+1
+        count_player_one=count_player_one+1
+    count_player_one=10
+    while count_player_one <=16:
+        if player[0][count_player_one] != '-':
+            count_element_player_one = count_element_player_one+1
+        count_player_one=count_player_one+1
+    count_element_player_two=0
+    count_player_two=1
+    while count_player_two <=6:
+        if player[1][count_player_two] != '-':
+            count_element_player_two = count_element_player_two+1
+        count_player_two=count_player_two+1
+    count_player_two=10
+    while count_player_two <=16:
+        if player[1][count_player_two] != '-':
+            count_element_player_two = count_element_player_two+1
+        count_player_two=count_player_two+1
+    if count_element_player_one > count_element_player_two:
+        print(f'{player[1][0]} ist an der Reihe!')
+        return 1
+    if count_element_player_one == count_element_player_two:
+        print(f'{player[0][0]} ist an der Reihe!')
+        return 0
 
 def dices(active_user):
     """simuliert würfeln"""
@@ -128,48 +160,35 @@ def upper_table(action_combine, active_user):
     """wegen pylint | optionen oberer teil der tabelle"""
     if action_combine==1:
         check = aces(active_user)
-        return check #1 wenn ok, 2 wenn schonmal eingetragen -> schleife läuft weiter
     if action_combine==2:
         check = twos(active_user)
-        return check #1 wenn ok, 2 wenn schonmal eingetragen -> schleife läuft weiter
     if action_combine==3:
         check = threes(active_user)
-        return check #1 wenn ok, 2 wenn schonmal eingetragen -> schleife läuft weiter
     if action_combine==4:
         check = fours(active_user)
-        return check #1 wenn ok, 2 wenn schonmal eingetragen -> schleife läuft weiter
     if action_combine==5:
         check = fives(active_user)
-        return check #1 wenn ok, 2 wenn schonmal eingetragen -> schleife läuft weiter
     if action_combine==6:
         check = sixes(active_user)
-        return check #1 wenn ok, 2 wenn schonmal eingetragen -> schleife läuft weiter
-    return 0
+    return check
 
 def bottom_table(action_combine, active_user):
     """wegen pylint | optionen unterer teil der tabelle"""
     if action_combine==7:
         check = pasch_three(active_user)
-        return check
     if action_combine==8:
         check = pasch_four(active_user)
-        return check
     if action_combine==9:
         check = full_house(active_user)
-        return check
     if action_combine==10:
         check = small_straight(active_user)
-        return check
     if action_combine==11:
         check = large_straight(active_user)
-        return check
     if action_combine==12:
         check = kniffel(active_user)
-        return check
     if action_combine==13:
         check = chance(active_user)
-        return check
-    return 0
+    return check
 
 def aces(active_user):
     """1er"""
@@ -440,18 +459,35 @@ def kniffel(active_user):
     with open('dice.json', 'r') as dice:
         dice_all=json.load(dice)
     check=dice_all[0]
-    if player[active_user][15] == '-':
-        if dice_all[1]==check and dice_all[2]==check and dice_all[3]==check and dice_all[4]==check:
+    if dice_all[1]==check and dice_all[2]==check and dice_all[3]==check and dice_all[4]==check:
+        if player[active_user][15] == '-':
             player[active_user][15]=50
             with open ('kniffel_player.json', 'w') as kniffel_player:
                 json.dump(player, kniffel_player, indent=4)
             with open ('dice.json', 'w') as dice:
                 json.dump(dice_all, dice, indent=4)
             return 1
-        print('\nLeider keine 5 gleiche Zahlen!\n')
-        return 0
-    print('\nSie haben in das Feld bereits etwas eingetragen!\n')
+        player[active_user][15]=player[active_user][15] + 50
+        with open ('kniffel_player.json', 'w') as kniffel_player:
+            json.dump(player, kniffel_player, indent=4)
+        with open ('dice.json', 'w') as dice:
+            json.dump(dice_all, dice, indent=4)
+        bonus_kniffel(active_user, check)
+        return 1
+    print('\nKein Kniffel möglich!\n')
     return 0
+
+def bonus_kniffel(active_user, check):
+    """interpretation: wenn feld frei: kniffel als max wert gesetzt, wenn belegt: addiert"""
+    #check als input spart dice-datei einlesen, plus variable neu declarieren
+    with open('kniffel_player.json', 'r') as kniffel_player:
+        player=json.load(kniffel_player)
+    if player[active_user][check]=='-':
+        player[active_user][check] = check*5
+    else:
+        player[active_user][check] = player[active_user][check] + check*5
+    with open ('kniffel_player.json', 'w') as kniffel_player:
+        json.dump(player, kniffel_player, indent=4)
 
 def chance(active_user):
     """Chance"""
