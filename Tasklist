@@ -19,3 +19,5 @@ Task bis 16.04.:
 
 - obere Tabelle als Funktion (Steven, Christian)
 - öffnen/schließen einer Datei als Funktion (Caro, Nico)
+
+Version: pylint --version
