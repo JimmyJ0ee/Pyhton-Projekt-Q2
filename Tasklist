@@ -1,5 +1,21 @@
 Task to do:
-- Exception beim Dateiöffnen
-- objektorientiertes Programmieren 
-- Testcoverage 75% pro Datei
+  - Exception beim Dateiöffnen
+  - objektorientiertes Programmieren 
+    -> Würfel - lohnt sich nicht
+    -> obere Tabelle - sinnvoll?
+    -> user - sinnvoll?
+  - Testcoverage 75% pro Datei
 
+
+Codeoptimierung:
+  - öffen/schließen der Datei als Funktion
+  - obere Tablle als eine Funktion
+  
+  
+
+Task bis 16.04.:
+
+- objekorientiertes Programmieren sinnvoll? (alle)
+
+- obere Tabelle als Funktion (Steven, Christian)
+- öffnen/schließen einer Datei als Funktion (Caro, Nico)
