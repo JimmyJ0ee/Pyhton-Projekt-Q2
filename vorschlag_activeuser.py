@@ -158,18 +158,7 @@ def combine(active_user):
 
 def upper_table(action_combine, active_user):
     """wegen pylint | optionen oberer teil der tabelle"""
-    if action_combine==1:
-        check = aces(active_user)
-    if action_combine==2:
-        check = twos(active_user)
-    if action_combine==3:
-        check = threes(active_user)
-    if action_combine==4:
-        check = fours(active_user)
-    if action_combine==5:
-        check = fives(active_user)
-    if action_combine==6:
-        check = sixes(active_user)
+    check = upper_table_function(active_user, action_combine)
     return check
 
 def bottom_table(action_combine, active_user):
@@ -190,124 +179,26 @@ def bottom_table(action_combine, active_user):
         check = chance(active_user)
     return check
 
-def aces(active_user):
-    """1er"""
+def upper_table_function(active_user, action_combine):
+    """funktionen für obere Tabelle"""
     with open('kniffel_player.json', 'r') as kniffel_player:
         player=json.load(kniffel_player)
     with open('dice.json', 'r') as dice:
         dice_all=json.load(dice)
-    if player[active_user][1] == '-':
-        count_aces=0
+    if player[active_user][action_combine] == '-':
+        count_elements=0
         for element in dice_all:
-            if element==1:
-                count_aces= count_aces + 1
-        player[active_user][1]=count_aces
+            if element==action_combine:
+                count_elements= count_elements + 1
+        sum_elements=count_elements*action_combine
+        player[active_user][action_combine]=sum_elements
+        print(sum_elements)
         with open ('kniffel_player.json', 'w') as kniffel_player:
             json.dump(player, kniffel_player, indent=4)
         with open ('dice.json', 'w') as dice:
             json.dump(dice_all, dice, indent=4)
         return 1
     print('\nSie haben in das Feld breits etwas eingetragen!\n')
-    return 0
-
-def twos(active_user):
-    """2er"""
-    with open('kniffel_player.json', 'r') as kniffel_player:
-        player=json.load(kniffel_player)
-    with open('dice.json', 'r') as dice:
-        dice_all=json.load(dice)
-    if player[active_user][2] == '-':
-        count_twos=0
-        for element in dice_all:
-            if element==2:
-                count_twos= count_twos + 2
-        player[active_user][2]=count_twos
-        with open ('kniffel_player.json', 'w') as kniffel_player:
-            json.dump(player, kniffel_player, indent=4)
-        with open ('dice.json', 'w') as dice:
-            json.dump(dice_all, dice, indent=4)
-        return 1
-    print('\nSie haben in das Feld bereits etwas eingetragen!\n')
-    return 0
-
-def threes(active_user):
-    """3er"""
-    with open('kniffel_player.json', 'r') as kniffel_player:
-        player=json.load(kniffel_player)
-    with open('dice.json', 'r') as dice:
-        dice_all=json.load(dice)
-    if player[active_user][3] == '-':
-        count_threes=0
-        for element in dice_all:
-            if element==3:
-                count_threes= count_threes + 3
-        player[active_user][3]=count_threes
-        with open ('kniffel_player.json', 'w') as kniffel_player:
-            json.dump(player, kniffel_player, indent=4)
-        with open ('dice.json', 'w') as dice:
-            json.dump(dice_all, dice, indent=4)
-        return 1
-    print('\nSie haben in das Feld bereits etwas eingetragen!\n')
-    return 0
-
-def fours(active_user):
-    """4er"""
-    with open('kniffel_player.json', 'r') as kniffel_player:
-        player=json.load(kniffel_player)
-    with open('dice.json', 'r') as dice:
-        dice_all=json.load(dice)
-    if player[active_user][4] == '-':
-        count_fours=0
-        for element in dice_all:
-            if element==4:
-                count_fours= count_fours + 4
-        player[active_user][4]=count_fours
-        with open ('kniffel_player.json', 'w') as kniffel_player:
-            json.dump(player, kniffel_player, indent=4)
-        with open ('dice.json', 'w') as dice:
-            json.dump(dice_all, dice, indent=4)
-        return 1
-    print('\nSie haben in das Feld bereits etwas eingetragen!\n')
-    return 0
-
-def fives(active_user):
-    """5er"""
-    with open('kniffel_player.json', 'r') as kniffel_player:
-        player=json.load(kniffel_player)
-    with open('dice.json', 'r') as dice:
-        dice_all=json.load(dice)
-    if player[active_user][5] == '-':
-        count_fives=0
-        for element in dice_all:
-            if element==5:
-                count_fives= count_fives + 5
-        player[active_user][5]=count_fives
-        with open ('kniffel_player.json', 'w') as kniffel_player:
-            json.dump(player, kniffel_player, indent=4)
-        with open ('dice.json', 'w') as dice:
-            json.dump(dice_all, dice, indent=4)
-        return 1
-    print('\nSie haben in das Feld bereits etwas eingetragen!\n')
-    return 0
-
-def sixes(active_user):
-    """6er"""
-    with open('kniffel_player.json', 'r') as kniffel_player:
-        player=json.load(kniffel_player)
-    with open('dice.json', 'r') as dice:
-        dice_all=json.load(dice)
-    if player[active_user][6] == '-':
-        count_sixes=0
-        for element in dice_all:
-            if element==6:
-                count_sixes= count_sixes + 6
-        player[active_user][6]=count_sixes
-        with open ('kniffel_player.json', 'w') as kniffel_player:
-            json.dump(player, kniffel_player, indent=4)
-        with open ('dice.json', 'w') as dice:
-            json.dump(dice_all, dice, indent=4)
-        return 1
-    print('\nSie haben in das Feld bereits etwas eingetragen!\n')
     return 0
 
 def pasch_three(active_user):
