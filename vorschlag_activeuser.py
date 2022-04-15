@@ -51,8 +51,7 @@ def delete_backup():
 
 def analyse_backup():
     """herausfinden welcher user dran + aktuelle tabelle printen"""
-    with open ('kniffel_player.json', 'r') as kniffel_input:
-        player=json.load(kniffel_input)
+    player=read_file_kniffel_player()
     count_element_player_one=0
     count_player_one=1
     while count_player_one <=6:
@@ -104,8 +103,7 @@ def dices(active_user):
         else:
             combine(active_user)
             break
-        with open ('dice.json', 'r') as dice:
-            dice_all = json.load(dice)
+        dice_all=read_file_dice()
         print(f'Neuer Wurf: {dice_all[0]},{dice_all[1]},{dice_all[2]},{dice_all[3]},{dice_all[4]}')
         action_count = action_count+1
     if action_count==3: #max anz züge erreicht
@@ -129,8 +127,7 @@ def dice_new(action_numbers):
 
 def combine(active_user):
     """mit finalem wurf zahlen kombinieren"""
-    with open('dice.json', 'r') as dice_input:
-        dice_all=json.load(dice_input)
+    dice_all=read_file_dice()
     loop_control=0
     while loop_control==0:
         print(f'Die Würfel: {dice_all[0]},{dice_all[1]},{dice_all[2]},{dice_all[3]},{dice_all[4]}')
@@ -175,10 +172,8 @@ def bottom_table(action_combine, active_user):
 
 def upper_table_function(active_user, action_combine):
     """funktionen für obere Tabelle"""
-    with open('kniffel_player.json', 'r') as kniffel_player:
-        player=json.load(kniffel_player)
-    with open('dice.json', 'r') as dice:
-        dice_all=json.load(dice)
+    player=read_file_kniffel_player()
+    dice_all=read_file_dice()
     if player[active_user][action_combine] == '-':
         count_elements=0
         for element in dice_all:
@@ -187,20 +182,16 @@ def upper_table_function(active_user, action_combine):
         sum_elements=count_elements*action_combine
         player[active_user][action_combine]=sum_elements
         print(sum_elements)
-        with open ('kniffel_player.json', 'w') as kniffel_player:
-            json.dump(player, kniffel_player, indent=4)
-        with open ('dice.json', 'w') as dice:
-            json.dump(dice_all, dice, indent=4)
+        write_file_player(player)
+        write_file_dice(dice_all)
         return 1
     print('\nSie haben in das Feld breits etwas eingetragen!\n')
     return 0
 
 def pasch_three(active_user):
     """Dreierpasch"""
-    with open('kniffel_player.json', 'r') as kniffel_player:
-        player=json.load(kniffel_player)
-    with open('dice.json', 'r') as dice:
-        dice_all=json.load(dice)
+    player=read_file_kniffel_player()
+    dice_all=read_file_dice()
     if player[active_user][10] == '-':
         el_eins = dice_all[0]
         el_zwei = dice_all[1]
@@ -212,10 +203,8 @@ def pasch_three(active_user):
                 sum_dice = sum_dice + dice_all[dice_count]
                 dice_count = dice_count + 1
             player[active_user][10]=sum_dice
-            with open ('kniffel_player.json', 'w') as kniffel_player:
-                json.dump(player, kniffel_player, indent=4)
-            with open ('dice.json', 'w') as dice:
-                json.dump(dice_all, dice, indent=4)
+            write_file_player(player)
+            write_file_dice(dice_all)
             return 1
         print('\nEs ist kein Dreierpasch möglich!\n')
         return 0
@@ -224,10 +213,8 @@ def pasch_three(active_user):
 
 def pasch_four(active_user):
     """Viererpasch"""
-    with open('kniffel_player.json', 'r') as kniffel_player:
-        player=json.load(kniffel_player)
-    with open('dice.json', 'r') as dice:
-        dice_all=json.load(dice)
+    player=read_file_kniffel_player()
+    dice_all=read_file_dice()
     if player[active_user][11] == '-':
         el_eins = dice_all[0]
         el_zwei = dice_all[1]
@@ -238,10 +225,8 @@ def pasch_four(active_user):
                 sum_dice = sum_dice + dice_all[dice_count]
                 dice_count = dice_count + 1
             player[active_user][11]=sum_dice
-            with open ('kniffel_player.json', 'w') as kniffel_player:
-                json.dump(player, kniffel_player, indent=4)
-            with open ('dice.json', 'w') as dice:
-                json.dump(dice_all, dice, indent=4)
+            write_file_player(player)
+            write_file_dice(dice_all)
             return 1
         print('\nEs ist kein Viererpasch möglich!\n')
         return 0
@@ -250,27 +235,21 @@ def pasch_four(active_user):
 
 def full_house(active_user):
     """Full House"""
-    with open('kniffel_player.json', 'r') as kniffel_player:
-        player=json.load(kniffel_player)
-    with open('dice.json', 'r') as dice:
-        dice_all=json.load(dice)
+    player=read_file_kniffel_player()
+    dice_all=read_file_dice()
     if player[active_user][12] == '-':
         dice_all_sorted = np.sort(dice_all)
         el_eins = dice_all_sorted[0]
         el_zwei = dice_all_sorted[3]
         if dice_all.count(el_eins)==3 and dice_all.count(el_zwei)==2:
             player[active_user][12] = 25
-            with open ('kniffel_player.json', 'w') as kniffel_player:
-                json.dump(player, kniffel_player, indent=4)
-            with open ('dice.json', 'w') as dice:
-                json.dump(dice_all, dice, indent=4)
+            write_file_player(player)
+            write_file_dice(dice_all)
             return 1
         if dice_all.count(el_eins)==2 and dice_all.count(el_zwei)==3:
             player[active_user][12] = 25
-            with open ('kniffel_player.json', 'w') as kniffel_player:
-                json.dump(player, kniffel_player, indent=4)
-            with open ('dice.json', 'w') as dice:
-                json.dump(dice_all, dice, indent=4)
+            write_file_player(player)
+            write_file_dice(dice_all)
             return 1
         print('\nEs ist kein Full House möglich!\n')
         return 0
@@ -279,31 +258,23 @@ def full_house(active_user):
 
 def small_straight(active_user):
     """kleine Straße"""
-    with open('kniffel_player.json', 'r') as kniffel_player:
-        player=json.load(kniffel_player)
-    with open('dice.json', 'r') as dice:
-        dice_all=json.load(dice)
+    player=read_file_kniffel_player()
+    dice_all=read_file_dice()
     if player[active_user][13] == '-':
         if (1 in dice_all) and (2 in dice_all) and (3 in dice_all) and (4 in dice_all):
             player[active_user][13]=30
-            with open ('kniffel_player.json', 'w') as kniffel_player:
-                json.dump(player, kniffel_player, indent=4)
-            with open ('dice.json', 'w') as dice:
-                json.dump(dice_all, dice, indent=4)
+            write_file_player(player)
+            write_file_dice(dice_all)
             return 1
         if (2 in dice_all) and (3 in dice_all) and (4 in dice_all) and (5 in dice_all):
             player[active_user][13]=30
-            with open ('kniffel_player.json', 'w') as kniffel_player:
-                json.dump(player, kniffel_player, indent=4)
-            with open ('dice.json', 'w') as dice:
-                json.dump(dice_all, dice, indent=4)
+            write_file_player(player)
+            write_file_dice(dice_all)
             return 1
         if (3 in dice_all) and (4 in dice_all) and (5 in dice_all) and (6 in dice_all):
             player[active_user][13]=30
-            with open ('kniffel_player.json', 'w') as kniffel_player:
-                json.dump(player, kniffel_player, indent=4)
-            with open ('dice.json', 'w') as dice:
-                json.dump(dice_all, dice, indent=4)
+            write_file_player(player)
+            write_file_dice(dice_all)
             return 1
         print('\nKeine kleine Straße möglich!\n')
         return 0
@@ -313,24 +284,18 @@ def small_straight(active_user):
 def large_straight(active_user):
     """große Straße"""
     #statt dice all, d_a da pylint sonst line too long
-    with open('kniffel_player.json', 'r') as kniffel_player:
-        player=json.load(kniffel_player)
-    with open('dice.json', 'r') as dice:
-        d_a=json.load(dice)
+    player=read_file_kniffel_player()
+    d_a=read_file_dice()
     if player[active_user][14] == '-':
         if (1 in d_a) and (2 in d_a) and (3 in d_a) and (4 in d_a) and (5 in d_a):
             player[active_user][14]=40
-            with open ('kniffel_player.json', 'w') as kniffel_player:
-                json.dump(player, kniffel_player, indent=4)
-            with open ('dice.json', 'w') as dice:
-                json.dump(d_a, dice, indent=4)
+            write_file_player(player)
+            write_file_dice(d_a)
             return 1
         if (2 in d_a) and (3 in d_a) and (4 in d_a) and (5 in d_a) and (6 in d_a):
             player[active_user][14]=40
-            with open ('kniffel_player.json', 'w') as kniffel_player:
-                json.dump(player, kniffel_player, indent=4)
-            with open ('dice.json', 'w') as dice:
-                json.dump(d_a, dice, indent=4)
+            write_file_player(player)
+            write_file_dice(d_a)
             return 1
         print('\nKeine große Straße möglich!\n')
         return 0
@@ -339,24 +304,18 @@ def large_straight(active_user):
 
 def kniffel(active_user):
     """Kniffel"""
-    with open('kniffel_player.json', 'r') as kniffel_player:
-        player=json.load(kniffel_player)
-    with open('dice.json', 'r') as dice:
-        dice_all=json.load(dice)
+    player=read_file_kniffel_player()
+    dice_all=read_file_dice()
     check=dice_all[0]
     if dice_all[1]==check and dice_all[2]==check and dice_all[3]==check and dice_all[4]==check:
         if player[active_user][15] == '-':
             player[active_user][15]=50
-            with open ('kniffel_player.json', 'w') as kniffel_player:
-                json.dump(player, kniffel_player, indent=4)
-            with open ('dice.json', 'w') as dice:
-                json.dump(dice_all, dice, indent=4)
+            write_file_player(player)
+            write_file_dice(dice_all)
             return 1
         player[active_user][15]=player[active_user][15] + 50
-        with open ('kniffel_player.json', 'w') as kniffel_player:
-            json.dump(player, kniffel_player, indent=4)
-        with open ('dice.json', 'w') as dice:
-            json.dump(dice_all, dice, indent=4)
+        write_file_player(player)
+        write_file_dice(dice_all)
         bonus_kniffel(active_user, check)
         return 1
     print('\nKein Kniffel möglich!\n')
@@ -365,8 +324,7 @@ def kniffel(active_user):
 def bonus_kniffel(active_user, check):
     """interpretation: wenn feld frei: kniffel als max wert gesetzt, wenn belegt: addiert"""
     #check als input spart dice-datei einlesen, plus variable neu declarieren
-    with open('kniffel_player.json', 'r') as kniffel_player:
-        player=json.load(kniffel_player)
+    player=read_file_kniffel_player()
     if player[active_user][check]=='-':
         player[active_user][check] = check*5
     else:
@@ -375,10 +333,8 @@ def bonus_kniffel(active_user, check):
 
 def chance(active_user):
     """Chance"""
-    with open('kniffel_player.json', 'r') as kniffel_player:
-        player=json.load(kniffel_player)
-    with open('dice.json', 'r') as dice:
-        dice_all=json.load(dice)
+    player=read_file_kniffel_player()
+    dice_all=read_file_dice()
     if player[active_user][16] == '-':
         dice_count=0
         sum_dice=0
@@ -386,18 +342,15 @@ def chance(active_user):
             sum_dice = sum_dice + dice_all[dice_count]
             dice_count = dice_count + 1
         player[active_user][16]=sum_dice
-        with open ('kniffel_player.json', 'w') as kniffel_player:
-            json.dump(player, kniffel_player, indent=4)
-        with open ('dice.json', 'w') as dice:
-            json.dump(dice_all, dice, indent=4)
+        write_file_player(player)
+        write_file_dice(dice_all)
         return 1
     print('\nSie haben in das Feld bereits etwas eingetragen!\n')
     return 0
 
 def strikeout(active_user):
     """feld streichen"""
-    with open('kniffel_player.json', 'r') as player_input:
-        player = json.load(player_input)
+    player=read_file_kniffel_player()
     loop_control=0
     while loop_control==0:
         try:
@@ -407,8 +360,7 @@ def strikeout(active_user):
             if player[active_user][choice_field+3] == '-':
                 if 7 <= choice_field <=13:
                     player[active_user][choice_field+3]=0
-                    with open('kniffel_player.json', 'w') as kniffel_player:
-                        json.dump(player, kniffel_player, indent=4)
+                    write_file_player(player)
                     loop_control=1
                     return 1
                 print('Bitte geben Sie eine Zahl zischen 7 und 13 ein!\n')
@@ -419,8 +371,7 @@ def strikeout(active_user):
 
 def bonus(active_user):
     """prüfen, ob mindestpunktzahl (63) für bonus erreicht"""
-    with open('kniffel_player.json', 'r') as player_input:
-        player = json.load(player_input)
+    player=read_file_kniffel_player()
     bonus_count = 1
     count_value = 0
     sum_six_coloums = 0
@@ -442,13 +393,11 @@ def bonus(active_user):
         else:
             player[active_user][7] = 0
             player[active_user][9] = sum_six_coloums
-    with open('kniffel_player.json', 'w') as kniffel_player:
-        json.dump(player, kniffel_player, indent=4)
+    write_file_player(player)
 
 def sum_bottom_table(active_user):
     """summe für unteren teil"""
-    with open('kniffel_player.json', 'r') as player_input:
-        player = json.load(player_input)
+    player=read_file_kniffel_player()
     sum_count = 10
     count_value = 0
     sum_six_coloums = 0
@@ -464,13 +413,11 @@ def sum_bottom_table(active_user):
             sum_six_coloums = sum_six_coloums + player[active_user][sum_count]
             sum_count = sum_count + 1
         player[active_user][17] = sum_six_coloums
-    with open('kniffel_player.json', 'w') as kniffel_player:
-        json.dump(player, kniffel_player, indent=4)
+    write_file_player(player)
 
 def winner():
     """geiwnner wird ermittelt und ausgegeben, plus spiel beendet"""
-    with open('kniffel_player.json', 'r') as player_input:
-        player = json.load(player_input)
+    player=read_file_kniffel_player()
     if player[0][9]!='-' and player[0][17]!='-' and player[1][9]!='-' and player[1][17]!='-':
         total_sum_one = player[0][9] + player[0][17]
         total_sum_two = player[1][9] + player[1][17]
@@ -482,8 +429,7 @@ def winner():
             print(f'Wow, {player[1][0]} hat gewonnen!')
         else:
             print('Wahnsinn... ein Unentschieden!!')
-        with open('kniffel_player.json', 'w') as kniffel_player:
-            json.dump(player, kniffel_player, indent=4)
+        write_file_player(player)
         ausgabe()
         return 1
     return 0
@@ -515,8 +461,7 @@ def ausgabe():
 
 def act_user(active_user, loop_control):
     """aktiver user wird gewechselt"""
-    with open('kniffel_player.json', 'r') as player_input:
-        player=json.load(player_input)
+    player=read_file_kniffel_player()
     if active_user==0:
         active_user=1
     else:
@@ -527,22 +472,43 @@ def act_user(active_user, loop_control):
 
 def write_file_player(player):
     """file schreiben"""
-    with open ('kniffel_player.json', 'w') as kniffel_player:
-        json.dump(player, kniffel_player, indent=4)
+    try:
+        with open ('kniffel_player.json', 'w') as kniffel_player:
+            json.dump(player, kniffel_player, indent=4)
+        print("Automatisches Speichern erfolgreich!")
+    except IOError:
+        print("IOError!")
+    except ValueError:
+        print("ValueError!")
 
 def write_file_dice(dice_all):
-    with open ('dice.json', 'w') as dice:
-        json.dump(dice_all, dice, indent=4)
+    try:
+        with open ('dice.json', 'w') as dice:
+            json.dump(dice_all, dice, indent=4)
+    except IOError:
+        print("IOError!")
+    except ValueError:
+        print("ValueError!")
 
 def read_file_kniffel_player():
     """file lesen"""
-    with open ('kniffel_player.json', 'r') as kniffel_player:
-        player=json.load(kniffel_player)
+    try:
+        with open ('kniffel_player.json', 'r') as kniffel_player:
+            player=json.load(kniffel_player)
+    except IOError:
+        print("IOError!")
+    except ValueError:
+        print("ValueError!")
     return player
 
 def read_file_dice():
-    with open ('dice.json', 'r') as dice:
-        dice_all = json.load(dice)
+    try:
+        with open ('dice.json', 'r') as dice:
+            dice_all = json.load(dice)
+    except IOError:
+        print("IOError!")
+    except ValueError:
+        print("ValueError!")
     return dice_all
     
 if __name__ == '__main__':
