@@ -6,6 +6,15 @@ Task to do:
     -> user - sinnvoll?
   - Testcoverage 75% pro Datei
   - pylint mit Anaconda keine 
+  - bei Eingaben ">>>"?
+  - Aktiven Spieler bei Spielbeginn anzeigen
+  - Tabs Zwischenstandstabelle / Formatierung 1. Wurf - weiterer Wurf angleichen
+  - Hinweis für Spieler, dass nicht Würfelaugen, sondern Würfelstelle eingegeben werden muss?
+  - Hinweis zu Spielbeginn, dass bei Programmabruch Zwischenstände gespeichert werden, quasi Pausenfunktion
+  - Typos s. Pycharm
+  - nur Spielzug-Einträge anzeigen, die noch verfügbar sind?
+  - gendern?
+  - Fehler bei Würfeleingabe abfangen: Buchstaben, negative Zahlen, Sonderzeichen, Zahlen außerhalb Array
 
 
 Codeoptimierung:
