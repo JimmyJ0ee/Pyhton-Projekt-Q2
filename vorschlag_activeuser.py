@@ -5,7 +5,6 @@ import numpy as np
 
 #good to know für eingabe neue würfel: leerzeichen vor und nach nummer des würfels
 #bsp: 2. und 4. würfel neu: '2 4' dann enter (auch: '2 und 4' davor/danach leer, rest egal)
-#zu tun: evtl klassen, testfunktion
 #evtl. schönheit der arbeit: z.B. live summen,
 #option alle würfel neu würfeln, bei spielende abfrage ob spiel erneut gestartet werden soll
 
@@ -36,8 +35,7 @@ def main():
 
 def delete_backup():
     """backup löschen + eingabe der spielernamen"""
-    with open ('kniffel_player.json', 'r') as kniffel_player:
-        player=json.load(kniffel_player)
+    player=read_file_kniffel_player()
     player[0][0] = input('Name Spieler 1: ')
     player[1][0] = input('Name Spieler 2: ')
     print('_______________________________________\n\n')
@@ -49,8 +47,7 @@ def delete_backup():
     while count_reset_player_two <= 18:
         player[1][count_reset_player_two] = '-'
         count_reset_player_two = count_reset_player_two + 1
-    with open ('kniffel_player.json', 'w') as kniffel_player:
-        json.dump(player, kniffel_player, indent=4)
+    write_file_player(player)
 
 def analyse_backup():
     """herausfinden welcher user dran + aktuelle tabelle printen"""
@@ -93,12 +90,11 @@ def dices(active_user):
     dice_four = random.randint(1,6)
     dice_five = random.randint(1,6)
     dice_all = [dice_one, dice_two, dice_three, dice_four, dice_five]
-    with open ('dice.json', 'w') as dice:
-        json.dump(dice_all, dice, indent=4)
+    write_file_dice(dice_all)
     action_count = 1
     print(f'Die Würfel: {dice_all[0]}  {dice_all[1]}  {dice_all[2]}  {dice_all[3]}  {dice_all[4]}')
     while action_count<=2:
-        action_text = input('Welche(n) Würfel möchten Sie erneut würfeln? (0 für <keinen>)\n')
+        action_text = input('Welche(n) Würfel möchten Sie erneut würfeln? (0 für <keinen>)\n') #Exception, da list index out of range erzeugt werden kann!
         action_numbers = []
         for element in action_text.split():
             if element.isdigit():
@@ -117,8 +113,7 @@ def dices(active_user):
 
 def dice_new(action_numbers):
     """würfel neu würfeln"""
-    with open ('dice.json', 'r') as dice:
-        dice_all = json.load(dice)
+    dice_all=read_file_dice()
     for element in action_numbers:
         if element=='1':
             dice_all[0] = random.randint(1,6)
@@ -130,8 +125,7 @@ def dice_new(action_numbers):
             dice_all[3] = random.randint(1,6)
         if element=='5':
             dice_all[4] = random.randint(1,6)
-    with open ('dice.json', 'w') as dice:
-        json.dump(dice_all, dice, indent=4)
+    write_file_dice(dice_all)
 
 def combine(active_user):
     """mit finalem wurf zahlen kombinieren"""
@@ -377,8 +371,7 @@ def bonus_kniffel(active_user, check):
         player[active_user][check] = check*5
     else:
         player[active_user][check] = player[active_user][check] + check*5
-    with open ('kniffel_player.json', 'w') as kniffel_player:
-        json.dump(player, kniffel_player, indent=4)
+    write_file_player(player)
 
 def chance(active_user):
     """Chance"""
@@ -497,8 +490,7 @@ def winner():
 
 def ausgabe():
     """ausgabe der kniffel-tabelle"""
-    with open ('kniffel_player.json', 'r') as kniffel_player:
-        player=json.load(kniffel_player)
+    player=read_file_kniffel_player()
     print('\nKNIFFEL:')
     print(f'\t\t\t{player[0][0]}\t\t{player[1][0]}')
     print(f'\n1er:\t\t\t{player[0][1]}\t\t{player[1][1]}')
@@ -533,5 +525,25 @@ def act_user(active_user, loop_control):
         print(f'{player[active_user][0]} ist an der Reihe!\n\n')
     return active_user
 
+def write_file_player(player):
+    """file schreiben"""
+    with open ('kniffel_player.json', 'w') as kniffel_player:
+        json.dump(player, kniffel_player, indent=4)
+
+def write_file_dice(dice_all):
+    with open ('dice.json', 'w') as dice:
+        json.dump(dice_all, dice, indent=4)
+
+def read_file_kniffel_player():
+    """file lesen"""
+    with open ('kniffel_player.json', 'r') as kniffel_player:
+        player=json.load(kniffel_player)
+    return player
+
+def read_file_dice():
+    with open ('dice.json', 'r') as dice:
+        dice_all = json.load(dice)
+    return dice_all
+    
 if __name__ == '__main__':
     main()

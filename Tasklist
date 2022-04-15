@@ -5,11 +5,13 @@ Task to do:
     -> obere Tabelle - sinnvoll?
     -> user - sinnvoll?
   - Testcoverage 75% pro Datei
+  - pylint mit Anaconda keine 
 
 
 Codeoptimierung:
   - öffen/schließen der Datei als Funktion
   - obere Tablle als eine Funktion
+  - Analyse backup ersetzen mit einer Zeile in kniffel_player.json, die den Spielzug angibt
   
   
 
