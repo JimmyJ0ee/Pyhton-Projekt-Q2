@@ -3,8 +3,6 @@ import json
 import random
 import numpy as np
 
-#good to know für eingabe neue würfel: leerzeichen vor und nach nummer des würfels
-#bsp: 2. und 4. würfel neu: '2 4' dann enter (auch: '2 und 4' davor/danach leer, rest egal)
 #evtl. schönheit der arbeit: z.B. live summen,
 #option alle würfel neu würfeln, bei spielende abfrage ob spiel erneut gestartet werden soll
 
@@ -356,14 +354,16 @@ def strikeout(active_user):
         try:
             print('Welches Feld möchten Sie streichen?')
             print('7. Dreierpasch\n8. Viererpasch\n9. Full House\n10. Kleine Straße')
-            choice_field = int (input('11. Große Straße\n12. Kniffel\n13. Chance\n'))
+            choice_field = int (input('11. Große Straße\n12. Kniffel\n13. Chance\n14. keins\n'))
             if player[active_user][choice_field+3] == '-':
                 if 7 <= choice_field <=13:
                     player[active_user][choice_field+3]=0
                     write_file_player(player)
                     loop_control=1
                     return 1
-                print('Bitte geben Sie eine Zahl zischen 7 und 13 ein!\n')
+                if choice_field == 14:
+                    return 0
+                print('Bitte geben Sie eine Zahl zischen 7 und 14 ein!\n')
             else:
                 print('\nSie können das Feld nicht streichen, da bereits etwas eingetragen ist!\n')
         except ValueError:
