@@ -1,6 +1,6 @@
 """datei für funktionen der würfel"""
 import random
-import kniffel_main
+import function_decision
 import file_handling
 
 def dices(active_user):
@@ -24,7 +24,7 @@ def dices(active_user):
             if action_numbers[0]!='0':
                 dice_new(action_numbers)
             else:
-                kniffel_main.combine(active_user)
+                function_decision.combine(active_user)
                 break
             dice=file_handling.read_file_dice()
             print(f'Neuer Wurf: {dice[0]}  {dice[1]}  {dice[2]}  {dice[3]}  {dice[4]}')
@@ -32,7 +32,7 @@ def dices(active_user):
         except IndexError:
             print('Bitte geben Sie Zahlen ein!')
     if action_count==3: #max anz züge erreicht
-        kniffel_main.combine(active_user)
+        function_decision.combine(active_user)
 
 def dice_new(action_numbers):
     """würfel neu würfeln"""

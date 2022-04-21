@@ -1,5 +1,5 @@
 """datei um summen tabelle und den gewinner zu ermitteln"""
-import print_table
+import print_table_change_user
 import file_handling
 
 def bonus(active_user):
@@ -63,6 +63,6 @@ def winner():
         else:
             print('Wahnsinn... ein Unentschieden!!')
         file_handling.write_file_player(player)
-        print_table.ausgabe()
+        print_table_change_user.ausgabe()
         return 1
     return 0
