@@ -1,4 +1,4 @@
-"""datei für funktionen der würfel"""
+"""datei für alle funktionen der würfel"""
 import random
 import function_decision
 import file_handling

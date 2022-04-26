@@ -1,9 +1,9 @@
-"""datei für file_handling"""
+"""datei für file handling, also alles was mit dateien zu tun hat"""
 import json
 import sys
 
 def read_file_kniffel_player():
-    """file lesen"""
+    """file kniffel_player lesen"""
     try:
         with open ('kniffel_player.json', 'r', encoding='utf8') as kniffel_player:
             player=json.load(kniffel_player)
@@ -16,7 +16,7 @@ def read_file_kniffel_player():
         sys.exit()
 
 def read_file_dice():
-    """file lesen"""
+    """file dice lesen"""
     try:
         with open ('dice.json', 'r', encoding='utf8') as dice:
             dice_all = json.load(dice)
@@ -29,11 +29,10 @@ def read_file_dice():
         sys.exit()
 
 def write_file_player(player):
-    """file schreiben"""
+    """file kniffel_player schreiben"""
     try:
         with open ('kniffel_player.json', 'w', encoding='utf8') as kniffel_player:
             json.dump(player, kniffel_player, indent=4)
-        print("Automatisches Speichern erfolgreich!")
     except IOError:
         print("IOError!")
         sys.exit()
@@ -42,7 +41,7 @@ def write_file_player(player):
         sys.exit()
 
 def write_file_dice(dice_all):
-    """file schreiben"""
+    """file dice schreiben"""
     try:
         with open ('dice.json', 'w', encoding='utf8') as dice:
             json.dump(dice_all, dice, indent=4)

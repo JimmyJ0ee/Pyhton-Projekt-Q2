@@ -1,4 +1,4 @@
-"""funktion für ausgabe der tabelle"""
+"""funktion für ausgabe der tabelle und weschsel des users"""
 import file_handling
 
 def act_user(active_user, loop_control):

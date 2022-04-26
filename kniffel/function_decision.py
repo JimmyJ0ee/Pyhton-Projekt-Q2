@@ -3,14 +3,15 @@ import file_handling
 import bottom_table_function
 
 def combine(active_user):
-    """mit finalem wurf zahlen kombinieren"""
+    """endgültige augenzahlen kombinieren"""
     dice_all=file_handling.read_file_dice()
     loop_control=0
     while loop_control==0:
-        print(f'Die Würfel: {dice_all[0]},{dice_all[1]},{dice_all[2]},{dice_all[3]},{dice_all[4]}')
-        print('Welche Kombination wählen Sie?\n1. 1er\n2. 2er\n3. 3er\n4. 4er\n5. 5er\n6. 6er')
-        print('7. Dreierpasch\n8. Viererpasch\n9. Full House\n10. Kleine Straße')
-        print('11. Große Straße\n12. Kniffel\n13. Chance\n14. Feld streichen')
+        print(f'''\nDie finalen Würfel:
+        \r{dice_all[0]}  {dice_all[1]}  {dice_all[2]}  {dice_all[3]}  {dice_all[4]}
+        \rWelche Kombination wählen Sie?\n1. 1er\n2. 2er\n3. 3er\n4. 4er\n5. 5er\n6. 6er
+        \r7. Dreierpasch\n8. Viererpasch\n9. Full House\n10. Kleine Straße\n11. Große Straße
+        \r12. Kniffel\n13. Chance\n14. Feld streichen''')
         try:
             action_combine = int (input('\nIhre Wahl: '))
             if 1 <= action_combine <=6:
@@ -25,7 +26,7 @@ def combine(active_user):
             print('\nGeben Sie bitte eine Zahl ein!')
 
 def upper_table_function(active_user, action_combine):
-    """funktionen für obere Tabelle"""
+    """funktion für optionen der oberen Tabelle"""
     player=file_handling.read_file_kniffel_player()
     dice_all=file_handling.read_file_dice()
     if player[active_user][action_combine] == '-':
@@ -43,7 +44,7 @@ def upper_table_function(active_user, action_combine):
     return 0
 
 def bottom_table(action_combine, active_user):
-    """wegen pylint | optionen unterer teil der tabelle"""
+    """optionen unterer teil der tabelle"""
     if action_combine==7:
         check = bottom_table_function.pasch_three(active_user)
     if action_combine==8:

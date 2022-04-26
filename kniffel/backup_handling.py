@@ -18,7 +18,7 @@ def delete_backup():
     file_handling.write_file_player(player)
 
 def analyse_backup():
-    """herausfinden welcher user dran + aktuelle tabelle printen"""
+    """herausfinden welcher user an der reihe + ausgeben wer dran ist"""
     player=file_handling.read_file_kniffel_player()
     count_element_player_one=0
     count_player_one=1

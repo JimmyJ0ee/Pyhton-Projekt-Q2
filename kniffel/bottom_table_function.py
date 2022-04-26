@@ -1,9 +1,9 @@
-"""datei für funktionen für untere tabelle"""
+"""datei für funktionen der unteren tabelle"""
 import numpy as np
 import file_handling
 
 def pasch_three(active_user):
-    """Dreierpasch"""
+    """Dreierpasch (prüfen und in tabelle eintragen)"""
     player=file_handling.read_file_kniffel_player()
     dice_all=file_handling.read_file_dice()
     if player[active_user][10] == '-':
@@ -26,7 +26,7 @@ def pasch_three(active_user):
     return 0
 
 def pasch_four(active_user):
-    """Viererpasch"""
+    """Viererpasch (prüfen und in tabelle eintragen)"""
     player=file_handling.read_file_kniffel_player()
     dice_all=file_handling.read_file_dice()
     if player[active_user][11] == '-':
@@ -48,7 +48,7 @@ def pasch_four(active_user):
     return 0
 
 def full_house(active_user):
-    """Full House"""
+    """Full House (prüfen und in tabelle eintragen)"""
     player=file_handling.read_file_kniffel_player()
     dice_all=file_handling.read_file_dice()
     if player[active_user][12] == '-':
@@ -71,7 +71,7 @@ def full_house(active_user):
     return 0
 
 def small_straight(active_user):
-    """kleine Straße"""
+    """kleine Straße (prüfen und in tabelle eintragen)"""
     player=file_handling.read_file_kniffel_player()
     dice_all=file_handling.read_file_dice()
     if player[active_user][13] == '-':
@@ -96,8 +96,7 @@ def small_straight(active_user):
     return 0
 
 def large_straight(active_user):
-    """große Straße"""
-    #statt dice all, d_a da pylint sonst line too long
+    """große Straße (prüfen und in tabelle eintragen)"""
     player=file_handling.read_file_kniffel_player()
     d_a=file_handling.read_file_dice()
     if player[active_user][14] == '-':
@@ -117,7 +116,7 @@ def large_straight(active_user):
     return 0
 
 def kniffel(active_user):
-    """Kniffel"""
+    """Kniffel (prüfen und in tabelle eintragen)"""
     player=file_handling.read_file_kniffel_player()
     dice_all=file_handling.read_file_dice()
     check=dice_all[0]
@@ -136,8 +135,7 @@ def kniffel(active_user):
     return 0
 
 def bonus_kniffel(active_user, check):
-    """interpretation: wenn feld frei: kniffel als max wert gesetzt, wenn belegt: addiert"""
-    #check als input spart dice-datei einlesen, plus variable neu declarieren
+    """ wenn feld der kniffel-augenzahl frei: kniffel wert gesetzt, wenn belegt: dazu addiert"""
     player=file_handling.read_file_kniffel_player()
     if player[active_user][check]=='-':
         player[active_user][check] = check*5
@@ -146,7 +144,7 @@ def bonus_kniffel(active_user, check):
     file_handling.write_file_player(player)
 
 def chance(active_user):
-    """Chance"""
+    """Chance (prüfen und in tabelle eintragen)"""
     player=file_handling.read_file_kniffel_player()
     dice_all=file_handling.read_file_dice()
     if player[active_user][16] == '-':
@@ -163,14 +161,14 @@ def chance(active_user):
     return 0
 
 def strikeout(active_user):
-    """feld streichen"""
+    """feld streichen (auswahl + 0 eintragen)"""
     player=file_handling.read_file_kniffel_player()
     loop_control=0
     while loop_control==0:
         try:
-            print('Welches Feld möchten Sie streichen?')
-            print('7. Dreierpasch\n8. Viererpasch\n9. Full House\n10. Kleine Straße')
-            choice_field = int (input('11. Große Straße\n12. Kniffel\n13. Chance\n14. keins\n'))
+            choice_field = int (input('''Welches Feld möchten Sie streichen?
+            \r7. Dreierpasch\n8. Viererpasch\n9. Full House\n10. Kleine Straße
+            \r11. Große Straße\n12. Kniffel\n13. Chance\n14. keins\n'''))
             if player[active_user][choice_field+3] == '-':
                 if 7 <= choice_field <=13:
                     player[active_user][choice_field+3]=0

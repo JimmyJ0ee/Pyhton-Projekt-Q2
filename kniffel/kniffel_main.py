@@ -1,18 +1,19 @@
-"""vorschlag für kniffel"""
+"""mainfunktion von kniffel"""
 import table_handling
 import backup_handling
 import dice_functions
 import print_table_change_user
-
-#evtl. schönheit der arbeit: z.B. live summen,
-#option alle würfel neu würfeln, bei spielende abfrage ob spiel erneut gestartet werden soll
 
 def main():
     """hauptprogramm"""
     active_user = 0
     loop_control_main = 0
     loop_control_backup = 0
-    print('Willkommen bei Kniffel!')
+    print('''Willkommen bei Kniffel!\nKleine Info: um die Würfel erneut zu würfeln ist es wichtig,
+    \rdass die Stelle des Würfels eingegeben wird.
+    \rSie wollen z.B. den 3. und 5. Würfel neu eingeben? Geben Sie wiefolgt ein: 3 5
+    \rDas Spiel kann jederzeit mit der Kombination strg + c unterbrochen,
+    \rund später wiederhergestellt werden\n''')
     while loop_control_backup == 0:
         backup_decision = input('\nMöchten Sie aus einem Backup laden? (j/n)\n')
         if backup_decision == 'n':

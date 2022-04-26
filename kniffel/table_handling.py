@@ -1,9 +1,9 @@
-"""datei um summen tabelle und den gewinner zu ermitteln"""
+"""summen tabelle und gewinner werden ermittelt"""
 import print_table_change_user
 import file_handling
 
 def bonus(active_user):
-    """prüfen, ob mindestpunktzahl (63) für bonus erreicht"""
+    """prüfen, ob mindestpunktzahl für bonus (oberer tabelle ; 63P) erreicht + summe eintragen"""
     player=file_handling.read_file_kniffel_player()
     bonus_count = 1
     count_value = 0
@@ -49,7 +49,7 @@ def sum_bottom_table(active_user):
     file_handling.write_file_player(player)
 
 def winner():
-    """geiwnner wird ermittelt und ausgegeben, plus spiel beendet"""
+    """geiwnner wird ermittelt und ausgegeben, spiel wird beendet"""
     player=file_handling.read_file_kniffel_player()
     if player[0][9]!='-' and player[0][17]!='-' and player[1][9]!='-' and player[1][17]!='-':
         total_sum_one = player[0][9] + player[0][17]
