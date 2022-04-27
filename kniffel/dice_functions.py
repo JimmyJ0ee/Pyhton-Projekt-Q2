@@ -20,7 +20,7 @@ def dices(active_user):
             action_numbers = []
             for element in action_text.split():
                 if element.isdigit() and (element not in action_numbers):
-                    if 1 <= int(element) <= 5:
+                    if 0 <= int(element) <= 5:
                         action_numbers.append(element)
                     else:
                         raise ValueError
@@ -37,7 +37,7 @@ def dices(active_user):
         except IndexError:
             print('Bitte geben Sie Zahlen ein!')
         except ValueError:
-            print('Bitte geben Sie eine Zahl von 1-5 und diese nur einmal ein!')
+            print('Bitte geben Sie eine Zahl von 0-5 und diese nur einmal ein!')
     if action_count==3: #max anz züge erreicht
         function_decision.combine(active_user)
 
