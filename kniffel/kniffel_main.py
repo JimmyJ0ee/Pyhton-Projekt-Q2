@@ -9,7 +9,7 @@ def main():
     active_user = 0
     loop_control_main = 0
     loop_control_backup = 0
-    print('''\nWillkommen bei Kniffel!\n\nKleine Info: um die Würfel erneut zu würfeln ist es wichtig,
+    print('''\nWillkommen bei Kniffel!\n\nKleine Info: um Würfel erneut zu würfeln ist es wichtig,
     \rdass die Stelle des Würfels eingegeben wird.
     \rSie wollen z.B. den 3. und 5. Würfel neu eingeben? Geben Sie wie folgt ein: 3 5
     \rDas Spiel kann jederzeit mit der Kombination strg + c unterbrochen
