@@ -4,8 +4,8 @@ import file_handling
 def delete_backup():
     """backup löschen + eingabe der spielernamen"""
     player=file_handling.read_file_kniffel_player()
-    player[0][0] = input('Name Spieler 1: ')
-    player[1][0] = input('Name Spieler 2: ')
+    player[0][0] = input('\nName Player 1: ')
+    player[1][0] = input('\nName Player 2: ')
     print('_______________________________________\n\n')
     count_reset_player_one = 1
     count_reset_player_two = 1

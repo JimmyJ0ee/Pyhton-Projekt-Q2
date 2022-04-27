@@ -9,13 +9,13 @@ def main():
     active_user = 0
     loop_control_main = 0
     loop_control_backup = 0
-    print('''Willkommen bei Kniffel!\nKleine Info: um die Würfel erneut zu würfeln ist es wichtig,
+    print('''\nWillkommen bei Kniffel!\n\nKleine Info: um die Würfel erneut zu würfeln ist es wichtig,
     \rdass die Stelle des Würfels eingegeben wird.
-    \rSie wollen z.B. den 3. und 5. Würfel neu eingeben? Geben Sie wiefolgt ein: 3 5
-    \rDas Spiel kann jederzeit mit der Kombination strg + c unterbrochen,
+    \rSie wollen z.B. den 3. und 5. Würfel neu eingeben? Geben Sie wie folgt ein: 3 5
+    \rDas Spiel kann jederzeit mit der Kombination strg + c unterbrochen
     \rund später wiederhergestellt werden\n''')
     while loop_control_backup == 0:
-        backup_decision = input('\nMöchten Sie aus einem Backup laden? (j/n)\n')
+        backup_decision = input('Möchten Sie aus einem Backup laden? (j/n)\n')
         if backup_decision == 'n':
             backup_handling.delete_backup()
             loop_control_backup = 1
