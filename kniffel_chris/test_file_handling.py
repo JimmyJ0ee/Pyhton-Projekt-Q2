@@ -3,7 +3,7 @@ from unittest import TestCase
 from unittest.mock import patch
 import file_handling
 
-class TestURLPrint(TestCase):
+class test_read_file_player(TestCase):
 	def test_read_file_kniffel_player(self):
 		with patch('sys.stdout', new = StringIO()):
 			self.assertRaises(Exception, file_handling.read_file_kniffel_player())

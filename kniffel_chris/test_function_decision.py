@@ -48,7 +48,7 @@ class Table(unittest.TestCase):
     
     #fehler: eof reading a line bei input der wahl
     #def test_combine(self):
-    #    with patch('sys.stdin', new = StringIO('5')):
+    #    with patch('sys.stdin', new = StringIO('10')):
     #        self.assertRaises(Exception, function_decision.combine(0))
     
     #@patch('combine_function.upper_table_function')
