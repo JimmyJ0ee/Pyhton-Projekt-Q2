@@ -14,5 +14,5 @@ import kniffel_main
 
 
         #"""with patch('sys.stdout', new = StringIO()):
-        #        with patch('sys.stdin', new = StringIO('j\n')):
+        #        with patch('sys.stdin', new = StringIO('j\n\n0\n13')):
         #            self.assertRaises(Exception, kniffel_main.main())"""
