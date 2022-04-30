@@ -3,20 +3,16 @@ from dice_functions import dices, dice_new
 from unittest.mock import patch
 from io import StringIO
 
-class Test_dices_functions(TestCase):
-
+class test_dices_functions(TestCase):
+    
+    #dice_new läuft durch bei richtiger Eingabe
     def test_dice_new(self):
         action_numbers = [1,2,3]
         with patch('sys.stdout', new = StringIO()):
             with patch('sys.stdin', new = StringIO()):
                 self.assertRaises(Exception, dice_new(action_numbers))
 
-    #klappt nicht: eof line read bei sys.stdin
-    #def test_dices(self):
-    #    with patch('sys.stdin', new = StringIO('1\n')):
-    #        self.assertRaises(Exception, dice_functions.dices(0))
-
-
+    #dices läuft weiter, auch wenn Funktionsvariable andere Werte als 1 oder 2 annimmt
     def test_dices(self):
         with patch('sys.stdout', new = StringIO()):
             with patch('sys.stdin', new = StringIO('1\n2\n3')):
@@ -30,7 +26,7 @@ class Test_dices_functions(TestCase):
             with patch('sys.stdin', new = StringIO('1\n2\n3')):
                 with self.assertRaises(TypeError):
                     dices(0.5458558)        
-    #Programm läuft bei korrekter Eingabe durch 
+    #dices läuft bei korrekter Eingabe durch 
         with patch('sys.stdout', new = StringIO()):    
             with patch('sys.stdin', new = StringIO('1\n2\n3')):
                 self.assertRaises(Exception, dices(0))

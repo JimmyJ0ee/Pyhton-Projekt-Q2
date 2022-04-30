@@ -1,9 +1,6 @@
-import imp
-from importlib.resources import path
 from io import StringIO
 from unittest import TestCase
 from unittest.mock import patch
-import json
 from bottom_table_function import *
 from file_handling import *
 
