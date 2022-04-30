@@ -177,7 +177,7 @@ def strikeout(active_user):
                     return 1
                 if choice_field == 14:
                     return 0
-                print('Bitte geben Sie eine Zahl zischen 7 und 14 ein!\n')
+                print('Bitte geben Sie eine Zahl zwischen 7 und 14 ein!\n')
             else:
                 print('\nSie können das Feld nicht streichen, da bereits etwas eingetragen ist!\n')
         except (ValueError, IndexError):
