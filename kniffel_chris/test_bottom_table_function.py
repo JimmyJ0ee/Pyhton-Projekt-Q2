@@ -217,5 +217,6 @@ class TestURLPrint(TestCase):
 			count_reset_player_two = count_reset_player_two + 1
 		with open ('kniffel_player.json', 'w', encoding='utf8') as kniffel_player:
 			json.dump(player, kniffel_player, indent=4)
-		with patch('sys.stdin', new = StringIO('12\n')):
-			self.assertRaises(Exception, bottom_table_function.strikeout(0))
+		with patch('sys.stdout', new = StringIO()):
+			with patch('sys.stdin', new = StringIO('12\n')):
+				self.assertRaises(Exception, bottom_table_function.strikeout(0))

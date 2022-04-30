@@ -8,12 +8,12 @@ def read_file_kniffel_player():
         with open ('kniffel_player.json', 'r', encoding='utf8') as kniffel_player:
             player=json.load(kniffel_player)
             return player
-    except IOError:
+    except IOError and ValueError:
         print("IOError!")
         sys.exit()
-    except ValueError:
+    """except ValueError:
         print("ValueError!")
-        sys.exit()
+        sys.exit()"""
 
 def read_file_dice():
     """file dice lesen"""
@@ -21,33 +21,33 @@ def read_file_dice():
         with open ('dice.json', 'r', encoding='utf8') as dice:
             dice_all = json.load(dice)
             return dice_all
-    except IOError:
+    except IOError and ValueError:
         print("IOError!")
         sys.exit()
-    except ValueError:
+    """except ValueError:
         print("ValueError!")
-        sys.exit()
+        sys.exit()"""
 
 def write_file_player(player):
     """file kniffel_player schreiben"""
     try:
         with open ('kniffel_player.json', 'w', encoding='utf8') as kniffel_player:
             json.dump(player, kniffel_player, indent=4)
-    except IOError:
+    except IOError or ValueError:
         print("IOError!")
         sys.exit()
-    except ValueError:
+    """except ValueError:
         print("ValueError!")
-        sys.exit()
+        sys.exit()"""
 
 def write_file_dice(dice_all):
     """file dice schreiben"""
     try:
         with open ('dice.json', 'w', encoding='utf8') as dice:
             json.dump(dice_all, dice, indent=4)
-    except IOError:
+    except IOError and ValueError:
         print("IOError!")
         sys.exit()
-    except ValueError:
+    """except ValueError:
         print("ValueError!")
-        sys.exit()
+        sys.exit()"""

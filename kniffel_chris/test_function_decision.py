@@ -27,20 +27,26 @@ class Table(unittest.TestCase):
 
         #inputs: action_combine, active_user
 
-        #pasch_three
-        self.assertEqual(function_decision.bottom_table(7, 0), 1)
-        #pasch_four
-        self.assertEqual(function_decision.bottom_table(8, 0), 2)
-        #full_house
-        self.assertEqual(function_decision.bottom_table(9, 0), 5)
-    	#small_straight
-        self.assertEqual(function_decision.bottom_table(10, 0), 3)
-        #large_straight
-        self.assertEqual(function_decision.bottom_table(11, 0), 4)
-        #kniffel
-        self.assertEqual(function_decision.bottom_table(12, 0), 6)
-        #chance
-        self.assertEqual(function_decision.bottom_table(13, 0), 7)
+            #pasch_three
+        with patch('sys.stdout', new = StringIO()):
+            self.assertEqual(function_decision.bottom_table(7, 0), 1)
+            #pasch_four
+        with patch('sys.stdout', new = StringIO()):
+            self.assertEqual(function_decision.bottom_table(8, 0), 2)
+            #full_house
+        with patch('sys.stdout', new = StringIO()):
+            self.assertEqual(function_decision.bottom_table(9, 0), 5)
+            #small_straight
+        with patch('sys.stdout', new = StringIO()):
+            self.assertEqual(function_decision.bottom_table(10, 0), 3)
+            #large_straight
+        with patch('sys.stdout', new = StringIO()):
+            self.assertEqual(function_decision.bottom_table(11, 0), 4)
+            #kniffel
+        with patch('sys.stdout', new = StringIO()):
+            self.assertEqual(function_decision.bottom_table(12, 0), 6)
+            #chance
+            self.assertEqual(function_decision.bottom_table(13, 0), 7)
 
     def test_write_file_dice(self):
         with patch('sys.stdout', new = StringIO()):

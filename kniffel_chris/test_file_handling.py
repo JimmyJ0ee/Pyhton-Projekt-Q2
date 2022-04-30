@@ -29,12 +29,9 @@ class test_read_file_player(TestCase):
 			read_file_kniffel_player()"""
 	#Problem: Error wird nicht geworfen
 	"""def test_read_file_player_ValueError(self):
-		player = 5
-		with open ('kniffel_player.json', 'w', encoding='utf8') as kniffel_player:
-			json.dump(player, kniffel_player, indent=4)
+		player = (("Caro",0,0,"-",0,5,18,"-","-","A",0,15,0,0,0,0,0,15,"-"),("Nico",1,0,"-",5,10,12,"-","-","-",0,0,0,30,40,0,0,70,"-"))
+		write_file_player(player)
 		with patch('sys.stdout', new = StringIO()):
 			with self.assertRaises(ValueError):
-				read_file_kniffel_player()
-		player = [["Caro",0,"-",6,0,5,18,"-","-","-","-","-","-","-","-","-","-","-","-"],["Nico",1,"-","-","-","ABC",12,"-","-","-","-","-","-",30,40,"-","-","-","-"]]
-		write_file_player(player)"""
+				read_file_kniffel_player()"""
 		
