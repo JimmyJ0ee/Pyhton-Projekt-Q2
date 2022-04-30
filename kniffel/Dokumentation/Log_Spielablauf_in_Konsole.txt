@@ -1,0 +1,1589 @@
+27.04.2022  13:17:49,65
+>kniffel_main.py
+
+Willkommen bei Kniffel!
+
+Kleine Info: um Würfel erneut zu würfeln ist es wichtig,
+dass die Stelle des Würfels eingegeben wird.
+Sie wollen z.B. den 3. und 5. Würfel neu eingeben? Geben Sie wie folgt ein: 3 5
+Das Spiel kann jederzeit mit der Kombination strg + c unterbrochen
+und später wiederhergestellt werden
+
+Möchten Sie aus einem Backup laden? (j/n)
+n
+
+Name Player 1: Mia
+
+Name Player 2: Anton
+_______________________________________
+
+
+Die Würfel: 6  2  1  3  3
+Welche(n) Würfel möchten Sie erneut würfeln? (0 für <keinen>)
+1 5
+Neuer Wurf: 3  2  1  3  6
+Welche(n) Würfel möchten Sie erneut würfeln? (0 für <keinen>)
+1 5
+Neuer Wurf: 4  2  1  3  5
+
+Die finalen Würfel:
+4  2  1  3  5
+Welche Kombination wählen Sie?
+1. 1er
+2. 2er
+3. 3er
+4. 4er
+5. 5er
+6. 6er
+7. Dreierpasch
+8. Viererpasch
+9. Full House
+10. Kleine Straße
+11. Große Straße
+12. Kniffel
+13. Chance
+14. Feld streichen
+
+Ihre Wahl: 11
+
+KNIFFEL:
+                        Mia             Anton
+
+1er:                    -               -
+2er:                    -               -
+3er:                    -               -
+4er:                    -               -
+5er:                    -               -
+6er:                    -               -
+Summe oben:             -               -
+Bonus:                  -               -
+Summe oben ges.:        -               -
+
+Dreierpasch:            -               -
+Viererpasch:            -               -
+Full House:             -               -
+Kleine Straße:          -               -
+Große Straße:           40              -
+Kniffel:                -               -
+Chance:                 -               -
+Summe unten:            -               -
+Summe oben ges.:        -               -
+Summe gesamt:           -               -
+
+
+Anton ist an der Reihe!
+
+
+Die Würfel: 1  2  2  1  2
+Welche(n) Würfel möchten Sie erneut würfeln? (0 für <keinen>)
+0
+
+Die finalen Würfel:
+1  2  2  1  2
+Welche Kombination wählen Sie?
+1. 1er
+2. 2er
+3. 3er
+4. 4er
+5. 5er
+6. 6er
+7. Dreierpasch
+8. Viererpasch
+9. Full House
+10. Kleine Straße
+11. Große Straße
+12. Kniffel
+13. Chance
+14. Feld streichen
+
+Ihre Wahl: 9
+
+KNIFFEL:
+                        Mia             Anton
+
+1er:                    -               -
+2er:                    -               -
+3er:                    -               -
+4er:                    -               -
+5er:                    -               -
+6er:                    -               -
+Summe oben:             -               -
+Bonus:                  -               -
+Summe oben ges.:        -               -
+
+Dreierpasch:            -               -
+Viererpasch:            -               -
+Full House:             -               25
+Kleine Straße:          -               -
+Große Straße:           40              -
+Kniffel:                -               -
+Chance:                 -               -
+Summe unten:            -               -
+Summe oben ges.:        -               -
+Summe gesamt:           -               -
+
+
+Mia ist an der Reihe!
+
+
+Die Würfel: 5  1  4  1  3
+Welche(n) Würfel möchten Sie erneut würfeln? (0 für <keinen>)
+2 4
+Neuer Wurf: 5  2  4  4  3
+Welche(n) Würfel möchten Sie erneut würfeln? (0 für <keinen>)
+0
+
+Die finalen Würfel:
+5  2  4  4  3
+Welche Kombination wählen Sie?
+1. 1er
+2. 2er
+3. 3er
+4. 4er
+5. 5er
+6. 6er
+7. Dreierpasch
+8. Viererpasch
+9. Full House
+10. Kleine Straße
+11. Große Straße
+12. Kniffel
+13. Chance
+14. Feld streichen
+
+Ihre Wahl: 10
+
+KNIFFEL:
+                        Mia             Anton
+
+1er:                    -               -
+2er:                    -               -
+3er:                    -               -
+4er:                    -               -
+5er:                    -               -
+6er:                    -               -
+Summe oben:             -               -
+Bonus:                  -               -
+Summe oben ges.:        -               -
+
+Dreierpasch:            -               -
+Viererpasch:            -               -
+Full House:             -               25
+Kleine Straße:          30              -
+Große Straße:           40              -
+Kniffel:                -               -
+Chance:                 -               -
+Summe unten:            -               -
+Summe oben ges.:        -               -
+Summe gesamt:           -               -
+
+
+Anton ist an der Reihe!
+
+
+Die Würfel: 3  3  3  1  6
+Welche(n) Würfel möchten Sie erneut würfeln? (0 für <keinen>)
+4 5
+Neuer Wurf: 3  3  3  2  4
+Welche(n) Würfel möchten Sie erneut würfeln? (0 für <keinen>)
+4 5
+Neuer Wurf: 3  3  3  6  1
+
+Die finalen Würfel:
+3  3  3  6  1
+Welche Kombination wählen Sie?
+1. 1er
+2. 2er
+3. 3er
+4. 4er
+5. 5er
+6. 6er
+7. Dreierpasch
+8. Viererpasch
+9. Full House
+10. Kleine Straße
+11. Große Straße
+12. Kniffel
+13. Chance
+14. Feld streichen
+
+Ihre Wahl: 3
+9
+
+KNIFFEL:
+                        Mia             Anton
+
+1er:                    -               -
+2er:                    -               -
+3er:                    -               9
+4er:                    -               -
+5er:                    -               -
+6er:                    -               -
+Summe oben:             -               -
+Bonus:                  -               -
+Summe oben ges.:        -               -
+
+Dreierpasch:            -               -
+Viererpasch:            -               -
+Full House:             -               25
+Kleine Straße:          30              -
+Große Straße:           40              -
+Kniffel:                -               -
+Chance:                 -               -
+Summe unten:            -               -
+Summe oben ges.:        -               -
+Summe gesamt:           -               -
+
+
+Mia ist an der Reihe!
+
+
+Die Würfel: 1  6  1  6  4
+Welche(n) Würfel möchten Sie erneut würfeln? (0 für <keinen>)
+5
+Neuer Wurf: 1  6  1  6  5
+Welche(n) Würfel möchten Sie erneut würfeln? (0 für <keinen>)
+5
+Neuer Wurf: 1  6  1  6  4
+
+Die finalen Würfel:
+1  6  1  6  4
+Welche Kombination wählen Sie?
+1. 1er
+2. 2er
+3. 3er
+4. 4er
+5. 5er
+6. 6er
+7. Dreierpasch
+8. Viererpasch
+9. Full House
+10. Kleine Straße
+11. Große Straße
+12. Kniffel
+13. Chance
+14. Feld streichen
+
+Ihre Wahl: 1
+2
+
+KNIFFEL:
+                        Mia             Anton
+
+1er:                    2               -
+2er:                    -               -
+3er:                    -               9
+4er:                    -               -
+5er:                    -               -
+6er:                    -               -
+Summe oben:             -               -
+Bonus:                  -               -
+Summe oben ges.:        -               -
+
+Dreierpasch:            -               -
+Viererpasch:            -               -
+Full House:             -               25
+Kleine Straße:          30              -
+Große Straße:           40              -
+Kniffel:                -               -
+Chance:                 -               -
+Summe unten:            -               -
+Summe oben ges.:        -               -
+Summe gesamt:           -               -
+
+
+Anton ist an der Reihe!
+
+
+Die Würfel: 4  2  6  2  1
+Welche(n) Würfel möchten Sie erneut würfeln? (0 für <keinen>)
+3 4
+Neuer Wurf: 4  2  6  2  1
+Welche(n) Würfel möchten Sie erneut würfeln? (0 für <keinen>)
+3 4
+Neuer Wurf: 4  2  4  5  1
+
+Die finalen Würfel:
+4  2  4  5  1
+Welche Kombination wählen Sie?
+1. 1er
+2. 2er
+3. 3er
+4. 4er
+5. 5er
+6. 6er
+7. Dreierpasch
+8. Viererpasch
+9. Full House
+10. Kleine Straße
+11. Große Straße
+12. Kniffel
+13. Chance
+14. Feld streichen
+
+Ihre Wahl: 1
+1
+
+KNIFFEL:
+                        Mia             Anton
+
+1er:                    2               1
+2er:                    -               -
+3er:                    -               9
+4er:                    -               -
+5er:                    -               -
+6er:                    -               -
+Summe oben:             -               -
+Bonus:                  -               -
+Summe oben ges.:        -               -
+
+Dreierpasch:            -               -
+Viererpasch:            -               -
+Full House:             -               25
+Kleine Straße:          30              -
+Große Straße:           40              -
+Kniffel:                -               -
+Chance:                 -               -
+Summe unten:            -               -
+Summe oben ges.:        -               -
+Summe gesamt:           -               -
+
+
+Mia ist an der Reihe!
+
+
+Die Würfel: 4  6  2  2  5
+Welche(n) Würfel möchten Sie erneut würfeln? (0 für <keinen>)
+1 2 5
+Neuer Wurf: 2  4  2  2  5
+Welche(n) Würfel möchten Sie erneut würfeln? (0 für <keinen>)
+2 5
+Neuer Wurf: 2  5  2  2  2
+
+Die finalen Würfel:
+2  5  2  2  2
+Welche Kombination wählen Sie?
+1. 1er
+2. 2er
+3. 3er
+4. 4er
+5. 5er
+6. 6er
+7. Dreierpasch
+8. Viererpasch
+9. Full House
+10. Kleine Straße
+11. Große Straße
+12. Kniffel
+13. Chance
+14. Feld streichen
+
+Ihre Wahl: 2
+8
+
+KNIFFEL:
+                        Mia             Anton
+
+1er:                    2               1
+2er:                    8               -
+3er:                    -               9
+4er:                    -               -
+5er:                    -               -
+6er:                    -               -
+Summe oben:             -               -
+Bonus:                  -               -
+Summe oben ges.:        -               -
+
+Dreierpasch:            -               -
+Viererpasch:            -               -
+Full House:             -               25
+Kleine Straße:          30              -
+Große Straße:           40              -
+Kniffel:                -               -
+Chance:                 -               -
+Summe unten:            -               -
+Summe oben ges.:        -               -
+Summe gesamt:           -               -
+
+
+Anton ist an der Reihe!
+
+
+Die Würfel: 1  5  5  2  4
+Welche(n) Würfel möchten Sie erneut würfeln? (0 für <keinen>)
+1 4 5
+Neuer Wurf: 2  5  5  6  5
+Welche(n) Würfel möchten Sie erneut würfeln? (0 für <keinen>)
+1 4
+Neuer Wurf: 6  5  5  3  5
+
+Die finalen Würfel:
+6  5  5  3  5
+Welche Kombination wählen Sie?
+1. 1er
+2. 2er
+3. 3er
+4. 4er
+5. 5er
+6. 6er
+7. Dreierpasch
+8. Viererpasch
+9. Full House
+10. Kleine Straße
+11. Große Straße
+12. Kniffel
+13. Chance
+14. Feld streichen
+
+Ihre Wahl: 7
+
+KNIFFEL:
+                        Mia             Anton
+
+1er:                    2               1
+2er:                    8               -
+3er:                    -               9
+4er:                    -               -
+5er:                    -               -
+6er:                    -               -
+Summe oben:             -               -
+Bonus:                  -               -
+Summe oben ges.:        -               -
+
+Dreierpasch:            -               24
+Viererpasch:            -               -
+Full House:             -               25
+Kleine Straße:          30              -
+Große Straße:           40              -
+Kniffel:                -               -
+Chance:                 -               -
+Summe unten:            -               -
+Summe oben ges.:        -               -
+Summe gesamt:           -               -
+
+
+Mia ist an der Reihe!
+
+
+Die Würfel: 3  1  4  2  4
+Welche(n) Würfel möchten Sie erneut würfeln? (0 für <keinen>)
+1 2 4
+Neuer Wurf: 6  1  4  5  4
+Welche(n) Würfel möchten Sie erneut würfeln? (0 für <keinen>)
+1 2 4
+Neuer Wurf: 4  6  4  2  4
+
+Die finalen Würfel:
+4  6  4  2  4
+Welche Kombination wählen Sie?
+1. 1er
+2. 2er
+3. 3er
+4. 4er
+5. 5er
+6. 6er
+7. Dreierpasch
+8. Viererpasch
+9. Full House
+10. Kleine Straße
+11. Große Straße
+12. Kniffel
+13. Chance
+14. Feld streichen
+
+Ihre Wahl: 4
+12
+
+KNIFFEL:
+                        Mia             Anton
+
+1er:                    2               1
+2er:                    8               -
+3er:                    -               9
+4er:                    12              -
+5er:                    -               -
+6er:                    -               -
+Summe oben:             -               -
+Bonus:                  -               -
+Summe oben ges.:        -               -
+
+Dreierpasch:            -               24
+Viererpasch:            -               -
+Full House:             -               25
+Kleine Straße:          30              -
+Große Straße:           40              -
+Kniffel:                -               -
+Chance:                 -               -
+Summe unten:            -               -
+Summe oben ges.:        -               -
+Summe gesamt:           -               -
+
+
+Anton ist an der Reihe!
+
+
+Die Würfel: 1  4  3  1  4
+Welche(n) Würfel möchten Sie erneut würfeln? (0 für <keinen>)
+4 5
+Neuer Wurf: 1  4  3  3  4
+Welche(n) Würfel möchten Sie erneut würfeln? (0 für <keinen>)
+4 5
+Neuer Wurf: 1  4  3  1  5
+
+Die finalen Würfel:
+1  4  3  1  5
+Welche Kombination wählen Sie?
+1. 1er
+2. 2er
+3. 3er
+4. 4er
+5. 5er
+6. 6er
+7. Dreierpasch
+8. Viererpasch
+9. Full House
+10. Kleine Straße
+11. Große Straße
+12. Kniffel
+13. Chance
+14. Feld streichen
+
+Ihre Wahl: b
+
+Geben Sie bitte eine Zahl ein!
+
+Die finalen Würfel:
+1  4  3  1  5
+Welche Kombination wählen Sie?
+1. 1er
+2. 2er
+3. 3er
+4. 4er
+5. 5er
+6. 6er
+7. Dreierpasch
+8. Viererpasch
+9. Full House
+10. Kleine Straße
+11. Große Straße
+12. Kniffel
+13. Chance
+14. Feld streichen
+
+Ihre Wahl: 13
+
+KNIFFEL:
+                        Mia             Anton
+
+1er:                    2               1
+2er:                    8               -
+3er:                    -               9
+4er:                    12              -
+5er:                    -               -
+6er:                    -               -
+Summe oben:             -               -
+Bonus:                  -               -
+Summe oben ges.:        -               -
+
+Dreierpasch:            -               24
+Viererpasch:            -               -
+Full House:             -               25
+Kleine Straße:          30              -
+Große Straße:           40              -
+Kniffel:                -               -
+Chance:                 -               14
+Summe unten:            -               -
+Summe oben ges.:        -               -
+Summe gesamt:           -               -
+
+
+Mia ist an der Reihe!
+
+
+Die Würfel: 6  5  3  5  6
+Welche(n) Würfel möchten Sie erneut würfeln? (0 für <keinen>)
+2 3 4
+Neuer Wurf: 6  2  5  3  6
+Welche(n) Würfel möchten Sie erneut würfeln? (0 für <keinen>)
+2 3 4
+Neuer Wurf: 6  1  1  6  6
+
+Die finalen Würfel:
+6  1  1  6  6
+Welche Kombination wählen Sie?
+1. 1er
+2. 2er
+3. 3er
+4. 4er
+5. 5er
+6. 6er
+7. Dreierpasch
+8. Viererpasch
+9. Full House
+10. Kleine Straße
+11. Große Straße
+12. Kniffel
+13. Chance
+14. Feld streichen
+
+Ihre Wahl: 6
+18
+
+KNIFFEL:
+                        Mia             Anton
+
+1er:                    2               1
+2er:                    8               -
+3er:                    -               9
+4er:                    12              -
+5er:                    -               -
+6er:                    18              -
+Summe oben:             -               -
+Bonus:                  -               -
+Summe oben ges.:        -               -
+
+Dreierpasch:            -               24
+Viererpasch:            -               -
+Full House:             -               25
+Kleine Straße:          30              -
+Große Straße:           40              -
+Kniffel:                -               -
+Chance:                 -               14
+Summe unten:            -               -
+Summe oben ges.:        -               -
+Summe gesamt:           -               -
+
+
+Anton ist an der Reihe!
+
+
+Die Würfel: 4  6  6  5  1
+Welche(n) Würfel möchten Sie erneut würfeln? (0 für <keinen>)
+1 4 5
+Neuer Wurf: 5  6  6  3  3
+Welche(n) Würfel möchten Sie erneut würfeln? (0 für <keinen>)
+1 4 5
+Neuer Wurf: 2  6  6  6  2
+
+Die finalen Würfel:
+2  6  6  6  2
+Welche Kombination wählen Sie?
+1. 1er
+2. 2er
+3. 3er
+4. 4er
+5. 5er
+6. 6er
+7. Dreierpasch
+8. Viererpasch
+9. Full House
+10. Kleine Straße
+11. Große Straße
+12. Kniffel
+13. Chance
+14. Feld streichen
+
+Ihre Wahl: 7
+
+Sie haben in das Feld bereits etwas eingetragen!
+
+
+Die finalen Würfel:
+2  6  6  6  2
+Welche Kombination wählen Sie?
+1. 1er
+2. 2er
+3. 3er
+4. 4er
+5. 5er
+6. 6er
+7. Dreierpasch
+8. Viererpasch
+9. Full House
+10. Kleine Straße
+11. Große Straße
+12. Kniffel
+13. Chance
+14. Feld streichen
+
+Ihre Wahl: 6
+18
+
+KNIFFEL:
+                        Mia             Anton
+
+1er:                    2               1
+2er:                    8               -
+3er:                    -               9
+4er:                    12              -
+5er:                    -               -
+6er:                    18              18
+Summe oben:             -               -
+Bonus:                  -               -
+Summe oben ges.:        -               -
+
+Dreierpasch:            -               24
+Viererpasch:            -               -
+Full House:             -               25
+Kleine Straße:          30              -
+Große Straße:           40              -
+Kniffel:                -               -
+Chance:                 -               14
+Summe unten:            -               -
+Summe oben ges.:        -               -
+Summe gesamt:           -               -
+
+
+Mia ist an der Reihe!
+
+
+Die Würfel: 2  2  4  3  2
+Welche(n) Würfel möchten Sie erneut würfeln? (0 für <keinen>)
+3 4
+Neuer Wurf: 2  2  2  4  2
+Welche(n) Würfel möchten Sie erneut würfeln? (0 für <keinen>)
+4
+Neuer Wurf: 2  2  2  6  2
+
+Die finalen Würfel:
+2  2  2  6  2
+Welche Kombination wählen Sie?
+1. 1er
+2. 2er
+3. 3er
+4. 4er
+5. 5er
+6. 6er
+7. Dreierpasch
+8. Viererpasch
+9. Full House
+10. Kleine Straße
+11. Große Straße
+12. Kniffel
+13. Chance
+14. Feld streichen
+
+Ihre Wahl: 8
+
+KNIFFEL:
+                        Mia             Anton
+
+1er:                    2               1
+2er:                    8               -
+3er:                    -               9
+4er:                    12              -
+5er:                    -               -
+6er:                    18              18
+Summe oben:             -               -
+Bonus:                  -               -
+Summe oben ges.:        -               -
+
+Dreierpasch:            -               24
+Viererpasch:            14              -
+Full House:             -               25
+Kleine Straße:          30              -
+Große Straße:           40              -
+Kniffel:                -               -
+Chance:                 -               14
+Summe unten:            -               -
+Summe oben ges.:        -               -
+Summe gesamt:           -               -
+
+
+Anton ist an der Reihe!
+
+
+Die Würfel: 6  1  5  6  4
+Welche(n) Würfel möchten Sie erneut würfeln? (0 für <keinen>)
+1 2
+Neuer Wurf: 5  2  5  6  4
+Welche(n) Würfel möchten Sie erneut würfeln? (0 für <keinen>)
+1 2
+Neuer Wurf: 6  4  5  6  4
+
+Die finalen Würfel:
+6  4  5  6  4
+Welche Kombination wählen Sie?
+1. 1er
+2. 2er
+3. 3er
+4. 4er
+5. 5er
+6. 6er
+7. Dreierpasch
+8. Viererpasch
+9. Full House
+10. Kleine Straße
+11. Große Straße
+12. Kniffel
+13. Chance
+14. Feld streichen
+
+Ihre Wahl: 4
+8
+
+KNIFFEL:
+                        Mia             Anton
+
+1er:                    2               1
+2er:                    8               -
+3er:                    -               9
+4er:                    12              8
+5er:                    -               -
+6er:                    18              18
+Summe oben:             -               -
+Bonus:                  -               -
+Summe oben ges.:        -               -
+
+Dreierpasch:            -               24
+Viererpasch:            14              -
+Full House:             -               25
+Kleine Straße:          30              -
+Große Straße:           40              -
+Kniffel:                -               -
+Chance:                 -               14
+Summe unten:            -               -
+Summe oben ges.:        -               -
+Summe gesamt:           -               -
+
+
+Mia ist an der Reihe!
+
+
+Die Würfel: 1  3  4  4  4
+Welche(n) Würfel möchten Sie erneut würfeln? (0 für <keinen>)
+1 2
+Neuer Wurf: 4  4  4  4  4
+Welche(n) Würfel möchten Sie erneut würfeln? (0 für <keinen>)
+0
+
+Die finalen Würfel:
+4  4  4  4  4
+Welche Kombination wählen Sie?
+1. 1er
+2. 2er
+3. 3er
+4. 4er
+5. 5er
+6. 6er
+7. Dreierpasch
+8. Viererpasch
+9. Full House
+10. Kleine Straße
+11. Große Straße
+12. Kniffel
+13. Chance
+14. Feld streichen
+
+Ihre Wahl: 12
+
+KNIFFEL:
+                        Mia             Anton
+
+1er:                    2               1
+2er:                    8               -
+3er:                    -               9
+4er:                    12              8
+5er:                    -               -
+6er:                    18              18
+Summe oben:             -               -
+Bonus:                  -               -
+Summe oben ges.:        -               -
+
+Dreierpasch:            -               24
+Viererpasch:            14              -
+Full House:             -               25
+Kleine Straße:          30              -
+Große Straße:           40              -
+Kniffel:                50              -
+Chance:                 -               14
+Summe unten:            -               -
+Summe oben ges.:        -               -
+Summe gesamt:           -               -
+
+
+Anton ist an der Reihe!
+
+
+Die Würfel: 1  2  5  4  1
+Welche(n) Würfel möchten Sie erneut würfeln? (0 für <keinen>)
+5
+Neuer Wurf: 1  2  5  4  4
+Welche(n) Würfel möchten Sie erneut würfeln? (0 für <keinen>)
+5
+Neuer Wurf: 1  2  5  4  1
+
+Die finalen Würfel:
+1  2  5  4  1
+Welche Kombination wählen Sie?
+1. 1er
+2. 2er
+3. 3er
+4. 4er
+5. 5er
+6. 6er
+7. Dreierpasch
+8. Viererpasch
+9. Full House
+10. Kleine Straße
+11. Große Straße
+12. Kniffel
+13. Chance
+14. Feld streichen
+
+Ihre Wahl: 2
+2
+
+KNIFFEL:
+                        Mia             Anton
+
+1er:                    2               1
+2er:                    8               2
+3er:                    -               9
+4er:                    12              8
+5er:                    -               -
+6er:                    18              18
+Summe oben:             -               -
+Bonus:                  -               -
+Summe oben ges.:        -               -
+
+Dreierpasch:            -               24
+Viererpasch:            14              -
+Full House:             -               25
+Kleine Straße:          30              -
+Große Straße:           40              -
+Kniffel:                50              -
+Chance:                 -               14
+Summe unten:            -               -
+Summe oben ges.:        -               -
+Summe gesamt:           -               -
+
+
+Mia ist an der Reihe!
+
+
+Die Würfel: 6  6  5  3  5
+Welche(n) Würfel möchten Sie erneut würfeln? (0 für <keinen>)
+1 2 4
+Neuer Wurf: 3  4  5  6  5
+Welche(n) Würfel möchten Sie erneut würfeln? (0 für <keinen>)
+1 2 4
+Neuer Wurf: 6  5  5  4  5
+
+Die finalen Würfel:
+6  5  5  4  5
+Welche Kombination wählen Sie?
+1. 1er
+2. 2er
+3. 3er
+4. 4er
+5. 5er
+6. 6er
+7. Dreierpasch
+8. Viererpasch
+9. Full House
+10. Kleine Straße
+11. Große Straße
+12. Kniffel
+13. Chance
+14. Feld streichen
+
+Ihre Wahl: 5
+15
+
+KNIFFEL:
+                        Mia             Anton
+
+1er:                    2               1
+2er:                    8               2
+3er:                    -               9
+4er:                    12              8
+5er:                    15              -
+6er:                    18              18
+Summe oben:             -               -
+Bonus:                  -               -
+Summe oben ges.:        -               -
+
+Dreierpasch:            -               24
+Viererpasch:            14              -
+Full House:             -               25
+Kleine Straße:          30              -
+Große Straße:           40              -
+Kniffel:                50              -
+Chance:                 -               14
+Summe unten:            -               -
+Summe oben ges.:        -               -
+Summe gesamt:           -               -
+
+
+Anton ist an der Reihe!
+
+
+Die Würfel: 3  6  2  5  3
+Welche(n) Würfel möchten Sie erneut würfeln? (0 für <keinen>)
+1 2
+Neuer Wurf: 2  2  2  5  3
+Welche(n) Würfel möchten Sie erneut würfeln? (0 für <keinen>)
+4 5
+Neuer Wurf: 2  2  2  2  2
+
+Die finalen Würfel:
+2  2  2  2  2
+Welche Kombination wählen Sie?
+1. 1er
+2. 2er
+3. 3er
+4. 4er
+5. 5er
+6. 6er
+7. Dreierpasch
+8. Viererpasch
+9. Full House
+10. Kleine Straße
+11. Große Straße
+12. Kniffel
+13. Chance
+14. Feld streichen
+
+Ihre Wahl: 12
+
+KNIFFEL:
+                        Mia             Anton
+
+1er:                    2               1
+2er:                    8               2
+3er:                    -               9
+4er:                    12              8
+5er:                    15              -
+6er:                    18              18
+Summe oben:             -               -
+Bonus:                  -               -
+Summe oben ges.:        -               -
+
+Dreierpasch:            -               24
+Viererpasch:            14              -
+Full House:             -               25
+Kleine Straße:          30              -
+Große Straße:           40              -
+Kniffel:                50              50
+Chance:                 -               14
+Summe unten:            -               -
+Summe oben ges.:        -               -
+Summe gesamt:           -               -
+
+
+Mia ist an der Reihe!
+
+
+Die Würfel: 1  4  2  6  3
+Welche(n) Würfel möchten Sie erneut würfeln? (0 für <keinen>)
+1 2 3 4
+Neuer Wurf: 6  5  5  5  3
+Welche(n) Würfel möchten Sie erneut würfeln? (0 für <keinen>)
+5
+Neuer Wurf: 6  5  5  5  1
+
+Die finalen Würfel:
+6  5  5  5  1
+Welche Kombination wählen Sie?
+1. 1er
+2. 2er
+3. 3er
+4. 4er
+5. 5er
+6. 6er
+7. Dreierpasch
+8. Viererpasch
+9. Full House
+10. Kleine Straße
+11. Große Straße
+12. Kniffel
+13. Chance
+14. Feld streichen
+
+Ihre Wahl: 7
+
+KNIFFEL:
+                        Mia             Anton
+
+1er:                    2               1
+2er:                    8               2
+3er:                    -               9
+4er:                    12              8
+5er:                    15              -
+6er:                    18              18
+Summe oben:             -               -
+Bonus:                  -               -
+Summe oben ges.:        -               -
+
+Dreierpasch:            22              24
+Viererpasch:            14              -
+Full House:             -               25
+Kleine Straße:          30              -
+Große Straße:           40              -
+Kniffel:                50              50
+Chance:                 -               14
+Summe unten:            -               -
+Summe oben ges.:        -               -
+Summe gesamt:           -               -
+
+
+Anton ist an der Reihe!
+
+
+Die Würfel: 1  2  5  2  1
+Welche(n) Würfel möchten Sie erneut würfeln? (0 für <keinen>)
+3 4 5
+Neuer Wurf: 1  2  6  6  2
+Welche(n) Würfel möchten Sie erneut würfeln? (0 für <keinen>)
+3 4 5
+Neuer Wurf: 1  2  3  2  2
+
+Die finalen Würfel:
+1  2  3  2  2
+Welche Kombination wählen Sie?
+1. 1er
+2. 2er
+3. 3er
+4. 4er
+5. 5er
+6. 6er
+7. Dreierpasch
+8. Viererpasch
+9. Full House
+10. Kleine Straße
+11. Große Straße
+12. Kniffel
+13. Chance
+14. Feld streichen
+
+Ihre Wahl: 14
+Welches Feld möchten Sie streichen?
+7. Dreierpasch
+8. Viererpasch
+9. Full House
+10. Kleine Straße
+11. Große Straße
+12. Kniffel
+13. Chance
+14. keins
+11
+
+KNIFFEL:
+                        Mia             Anton
+
+1er:                    2               1
+2er:                    8               2
+3er:                    -               9
+4er:                    12              8
+5er:                    15              -
+6er:                    18              18
+Summe oben:             -               -
+Bonus:                  -               -
+Summe oben ges.:        -               -
+
+Dreierpasch:            22              24
+Viererpasch:            14              -
+Full House:             -               25
+Kleine Straße:          30              -
+Große Straße:           40              0
+Kniffel:                50              50
+Chance:                 -               14
+Summe unten:            -               -
+Summe oben ges.:        -               -
+Summe gesamt:           -               -
+
+
+Mia ist an der Reihe!
+
+
+Die Würfel: 1  6  3  4  1
+Welche(n) Würfel möchten Sie erneut würfeln? (0 für <keinen>)
+1 2 4 5
+Neuer Wurf: 1  2  3  1  4
+Welche(n) Würfel möchten Sie erneut würfeln? (0 für <keinen>)
+2 5
+Neuer Wurf: 1  4  3  1  1
+
+Die finalen Würfel:
+1  4  3  1  1
+Welche Kombination wählen Sie?
+1. 1er
+2. 2er
+3. 3er
+4. 4er
+5. 5er
+6. 6er
+7. Dreierpasch
+8. Viererpasch
+9. Full House
+10. Kleine Straße
+11. Große Straße
+12. Kniffel
+13. Chance
+14. Feld streichen
+
+Ihre Wahl: 13
+
+KNIFFEL:
+                        Mia             Anton
+
+1er:                    2               1
+2er:                    8               2
+3er:                    -               9
+4er:                    12              8
+5er:                    15              -
+6er:                    18              18
+Summe oben:             -               -
+Bonus:                  -               -
+Summe oben ges.:        -               -
+
+Dreierpasch:            22              24
+Viererpasch:            14              -
+Full House:             -               25
+Kleine Straße:          30              -
+Große Straße:           40              0
+Kniffel:                50              50
+Chance:                 10              14
+Summe unten:            -               -
+Summe oben ges.:        -               -
+Summe gesamt:           -               -
+
+
+Anton ist an der Reihe!
+
+
+Die Würfel: 1  5  2  3  4
+Welche(n) Würfel möchten Sie erneut würfeln? (0 für <keinen>)
+0
+
+Die finalen Würfel:
+1  5  2  3  4
+Welche Kombination wählen Sie?
+1. 1er
+2. 2er
+3. 3er
+4. 4er
+5. 5er
+6. 6er
+7. Dreierpasch
+8. Viererpasch
+9. Full House
+10. Kleine Straße
+11. Große Straße
+12. Kniffel
+13. Chance
+14. Feld streichen
+
+Ihre Wahl: 11
+
+Sie haben in das Feld bereits etwas eingetragen!
+
+
+Die finalen Würfel:
+1  5  2  3  4
+Welche Kombination wählen Sie?
+1. 1er
+2. 2er
+3. 3er
+4. 4er
+5. 5er
+6. 6er
+7. Dreierpasch
+8. Viererpasch
+9. Full House
+10. Kleine Straße
+11. Große Straße
+12. Kniffel
+13. Chance
+14. Feld streichen
+
+Ihre Wahl: 10
+
+KNIFFEL:
+                        Mia             Anton
+
+1er:                    2               1
+2er:                    8               2
+3er:                    -               9
+4er:                    12              8
+5er:                    15              -
+6er:                    18              18
+Summe oben:             -               -
+Bonus:                  -               -
+Summe oben ges.:        -               -
+
+Dreierpasch:            22              24
+Viererpasch:            14              -
+Full House:             -               25
+Kleine Straße:          30              30
+Große Straße:           40              0
+Kniffel:                50              50
+Chance:                 10              14
+Summe unten:            -               -
+Summe oben ges.:        -               -
+Summe gesamt:           -               -
+
+
+Mia ist an der Reihe!
+
+
+Die Würfel: 6  6  1  3  1
+Welche(n) Würfel möchten Sie erneut würfeln? (0 für <keinen>)
+4
+Neuer Wurf: 6  6  1  4  1
+Welche(n) Würfel möchten Sie erneut würfeln? (0 für <keinen>)
+4
+Neuer Wurf: 6  6  1  1  1
+
+Die finalen Würfel:
+6  6  1  1  1
+Welche Kombination wählen Sie?
+1. 1er
+2. 2er
+3. 3er
+4. 4er
+5. 5er
+6. 6er
+7. Dreierpasch
+8. Viererpasch
+9. Full House
+10. Kleine Straße
+11. Große Straße
+12. Kniffel
+13. Chance
+14. Feld streichen
+
+Ihre Wahl: 9
+
+KNIFFEL:
+                        Mia             Anton
+
+1er:                    2               1
+2er:                    8               2
+3er:                    -               9
+4er:                    12              8
+5er:                    15              -
+6er:                    18              18
+Summe oben:             -               -
+Bonus:                  -               -
+Summe oben ges.:        -               -
+
+Dreierpasch:            22              24
+Viererpasch:            14              -
+Full House:             25              25
+Kleine Straße:          30              30
+Große Straße:           40              0
+Kniffel:                50              50
+Chance:                 10              14
+Summe unten:            191             -
+Summe oben ges.:        -               -
+Summe gesamt:           -               -
+
+
+Anton ist an der Reihe!
+
+
+Die Würfel: 4  6  3  6  5
+Welche(n) Würfel möchten Sie erneut würfeln? (0 für <keinen>)
+1 3 5
+Neuer Wurf: 3  6  3  6  4
+Welche(n) Würfel möchten Sie erneut würfeln? (0 für <keinen>)
+1 3 5
+Neuer Wurf: 2  6  4  6  6
+
+Die finalen Würfel:
+2  6  4  6  6
+Welche Kombination wählen Sie?
+1. 1er
+2. 2er
+3. 3er
+4. 4er
+5. 5er
+6. 6er
+7. Dreierpasch
+8. Viererpasch
+9. Full House
+10. Kleine Straße
+11. Große Straße
+12. Kniffel
+13. Chance
+14. Feld streichen
+
+Ihre Wahl: 14
+Welches Feld möchten Sie streichen?
+7. Dreierpasch
+8. Viererpasch
+9. Full House
+10. Kleine Straße
+11. Große Straße
+12. Kniffel
+13. Chance
+14. keins
+8
+
+KNIFFEL:
+                        Mia             Anton
+
+1er:                    2               1
+2er:                    8               2
+3er:                    -               9
+4er:                    12              8
+5er:                    15              -
+6er:                    18              18
+Summe oben:             -               -
+Bonus:                  -               -
+Summe oben ges.:        -               -
+
+Dreierpasch:            22              24
+Viererpasch:            14              0
+Full House:             25              25
+Kleine Straße:          30              30
+Große Straße:           40              0
+Kniffel:                50              50
+Chance:                 10              14
+Summe unten:            191             143
+Summe oben ges.:        -               -
+Summe gesamt:           -               -
+
+
+Mia ist an der Reihe!
+
+
+Die Würfel: 1  1  1  6  6
+Welche(n) Würfel möchten Sie erneut würfeln? (0 für <keinen>)
+1 2 3 4 5
+Neuer Wurf: 3  5  2  5  4
+Welche(n) Würfel möchten Sie erneut würfeln? (0 für <keinen>)
+2 3 4 5
+Neuer Wurf: 3  4  5  5  1
+
+Die finalen Würfel:
+3  4  5  5  1
+Welche Kombination wählen Sie?
+1. 1er
+2. 2er
+3. 3er
+4. 4er
+5. 5er
+6. 6er
+7. Dreierpasch
+8. Viererpasch
+9. Full House
+10. Kleine Straße
+11. Große Straße
+12. Kniffel
+13. Chance
+14. Feld streichen
+
+Ihre Wahl: 3
+3
+
+KNIFFEL:
+                        Mia             Anton
+
+1er:                    2               1
+2er:                    8               2
+3er:                    3               9
+4er:                    12              8
+5er:                    15              -
+6er:                    18              18
+Summe oben:             58              -
+Bonus:                  0               -
+Summe oben ges.:        58              -
+
+Dreierpasch:            22              24
+Viererpasch:            14              0
+Full House:             25              25
+Kleine Straße:          30              30
+Große Straße:           40              0
+Kniffel:                50              50
+Chance:                 10              14
+Summe unten:            191             143
+Summe oben ges.:        58              -
+Summe gesamt:           -               -
+
+
+Anton ist an der Reihe!
+
+
+Die Würfel: 1  2  2  6  3
+Welche(n) Würfel möchten Sie erneut würfeln? (0 für <keinen>)
+1 2 3 4 5
+Neuer Wurf: 4  4  4  1  4
+Welche(n) Würfel möchten Sie erneut würfeln? (0 für <keinen>)
+1 2 3 4 5
+Neuer Wurf: 6  1  4  2  5
+
+Die finalen Würfel:
+6  1  4  2  5
+Welche Kombination wählen Sie?
+1. 1er
+2. 2er
+3. 3er
+4. 4er
+5. 5er
+6. 6er
+7. Dreierpasch
+8. Viererpasch
+9. Full House
+10. Kleine Straße
+11. Große Straße
+12. Kniffel
+13. Chance
+14. Feld streichen
+
+Ihre Wahl: 5
+5
+
+KNIFFEL:
+                        Mia             Anton
+
+1er:                    2               1
+2er:                    8               2
+3er:                    3               9
+4er:                    12              8
+5er:                    15              5
+6er:                    18              18
+Summe oben:             58              43
+Bonus:                  0               0
+Summe oben ges.:        58              43
+
+Dreierpasch:            22              24
+Viererpasch:            14              0
+Full House:             25              25
+Kleine Straße:          30              30
+Große Straße:           40              0
+Kniffel:                50              50
+Chance:                 10              14
+Summe unten:            191             143
+Summe oben ges.:        58              43
+Summe gesamt:           -               -
+
+
+Wow, Mia hat gewonnen!
+
+KNIFFEL:
+                        Mia             Anton
+
+1er:                    2               1
+2er:                    8               2
+3er:                    3               9
+4er:                    12              8
+5er:                    15              5
+6er:                    18              18
+Summe oben:             58              43
+Bonus:                  0               0
+Summe oben ges.:        58              43
+
+Dreierpasch:            22              24
+Viererpasch:            14              0
+Full House:             25              25
+Kleine Straße:          30              30
+Große Straße:           40              0
+Kniffel:                50              50
+Chance:                 10              14
+Summe unten:            191             143
+Summe oben ges.:        58              43
+Summe gesamt:           249             186
+

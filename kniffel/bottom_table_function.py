@@ -180,5 +180,5 @@ def strikeout(active_user):
                 print('Bitte geben Sie eine Zahl zischen 7 und 14 ein!\n')
             else:
                 print('\nSie können das Feld nicht streichen, da bereits etwas eingetragen ist!\n')
-        except ValueError:
+        except (ValueError, IndexError):
             print('Bitte geben Sie eine Zahl ein!\n')
